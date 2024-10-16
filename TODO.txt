@@ -1,0 +1,8 @@
+- Add profile photo
+- Add cookies
+- Get it hosted on the web
+- Finish Geometry math notes
+- Add styles for math notes
+
++ Add more math notes
++ Add another "example"

@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: lightblue;
+    font-family: "Courier New", monospace;
+}
+
+html {
+    background-image: url("cardboardbackground.jpg");
+}
+
+section a {
+    color: green;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: fixed;
+    width: 100%;
+
+    background: black;
+    z-index: 1;
+}
+
+nav a {
+    text-decoration: none;
+    padding: 7px;
+    border: 1px solid white;
+    border-radius: .5em;
+}
+
+main {
+    position: relative;
+    top: 74px;
+    padding-right: 10%;
+    padding-left: 10%;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 5em;
+}
+
+main > div {
+    border: 1px dashed white;
+    border-radius: 5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+
+    padding: 2em;
+}
+
+main div section {
+    border: 1px solid white;
+    border-radius: 5em;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+
+    padding: 2em;
+}
+
+img {
+    width: 10em;
+    height: 10em;
+    border-radius: 25%;
+}
+
+@media screen and (min-width: 450px) {
+    #identification {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        column-gap: 5%;
+    }
+
+    #identification-information {
+        display: flex;
+        flex-direction: column;
+        row-gap: 2em;
+    }
+}

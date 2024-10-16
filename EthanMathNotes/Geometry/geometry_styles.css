@@ -1,0 +1,67 @@
+* {
+    font-family: "Courier New", monospace;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background: #fefbd8;
+}
+
+header {
+    background: #618685;
+    text-align: center;
+    padding: 2em;
+}
+
+main {
+    /*background: beige;*/
+    padding: 1em 5%;
+}
+
+body > nav {
+    /*background: #fefbd8;*/
+    padding: 2em;
+}
+
+footer {
+    padding: 2em;
+}
+
+main dt {
+    margin-top: 2em;
+    padding-top: 2em;
+    border-top: dotted black;
+
+    color: #9A2617;
+    font-weight: bold;
+}
+
+main dd {
+    color: #F26D21;
+    margin-left: 5%;
+}
+
+main h3 {
+    margin-top: 4em;
+    padding-top: 2em;
+    border-top: solid black;
+
+    text-align: center;
+}
+
+main h2 {
+    padding-top: 2em;
+    text-align: center;
+}
+
+img {
+    margin: 1em;
+}
+
+/*
+TODO: remove when finished with all the other geometry pages and added their links to all the pages
+*/
+header > nav {
+    visibility: hidden;
+}
