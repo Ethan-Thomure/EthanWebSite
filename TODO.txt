@@ -1,4 +1,3 @@
-- Add profile photo
 - Add cookies
 - Get it hosted on the web
 - Finish Geometry math notes
