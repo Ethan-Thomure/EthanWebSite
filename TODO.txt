@@ -1,7 +1,24 @@
-- Add cookies
-- Get it hosted on the web
-- Finish Geometry math notes
-- Add styles for math notes
+For the home page...
+    -   Make it more responsive
+    -   add more examples
 
-+ Add more math notes
-+ Add another "example"
+For the math notes...
+    -   Finish Geometry math notes
+        -   Either remove all target=_blank, or make it consistent
+        -   fix the (?)
+        -   Make it more readable (bad colors)
+        -   browser can change colors based on light and dark mode, may want to pick the colors
+        -   Add more and better pictures
+        -   consider better file arrangement
+        -   add top navigation bar, maybe make it "sticky"
+        -   add definition for similar (~), then add links to this where it says "similar"
+        -   add definition for leg and hypotenuse, then add links to this where it says "leg" (specifically for a triangle)
+        -   add definition for mean proportional, then add links to this where it says "mean proportional"
+        -   add definition for secant, then add links to this where it says "secant"
+        -   add definition for base, then add links to this where it says "base"
+        -   add another definition for altitude for other shapes, namely parallelogram, then look back through the mentions of altitudes and link to correct definition
+        -   add definition for "subtend"
+        -   add definition for circumscribe
+        -   add definition for sector
+        -   add proper links and revamp "notes"
+    - Add more Math notes (Maybe Precalculus next)

@@ -35,11 +35,13 @@ main dt {
 
     color: #9A2617;
     font-weight: bold;
+    font-size: larger;
 }
 
 main dd {
-    color: #F26D21;
+    color: #76470A;
     margin-left: 5%;
+    font-size: large;
 }
 
 main h3 {

@@ -69,17 +69,21 @@ img {
     border-radius: 25%;
 }
 
-@media screen and (min-width: 450px) {
-    #identification {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        column-gap: 5%;
-    }
+#identification {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    column-gap: 5%;
+}
 
-    #identification-information {
-        display: flex;
-        flex-direction: column;
-        row-gap: 2em;
+#identification-information {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2em;
+}
+
+@media only screen and (max-width: 600px) {
+    nav *{
+        font-size: xx-large;
     }
 }
