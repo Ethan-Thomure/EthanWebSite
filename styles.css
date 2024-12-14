@@ -6,7 +6,7 @@
 }
 
 html {
-    background-image: url("cardboardbackground.jpg");
+    background-image: url("images/cardboardbackground.jpg");
 }
 
 section a {
@@ -82,8 +82,26 @@ img {
     row-gap: 2em;
 }
 
-@media only screen and (max-width: 600px) {
-    nav *{
+@media (pointer:none), (pointer:coarse) {
+    nav a{
         font-size: xx-large;
+        padding: 10px;
+        /*border-width: 0;*/
     }
+
+    main > div {
+        /*border-width: 0;*/
+        font-size: larger;
+
+    }
+
+    main div section {
+        /*border-width: 0;*/
+        font-size: larger;
+    }
+
+    main {
+        top: 100px;
+    }
+
 }
