@@ -7,7 +7,7 @@ for (let i = 0; i < navigation_links.length; i++) {
 }
 
 example_links = document.getElementsByClassName("example");
-for (let i = 0; i < navigation_links.length; i++) {
+for (let i = 0; i < example_links.length; i++) {
     example_links[i].onmouseover = linkMouseOver;
     example_links[i].onmouseleave = exampleDefault;
 }
