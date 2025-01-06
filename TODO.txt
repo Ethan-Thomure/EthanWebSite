@@ -1,6 +1,7 @@
 For the home page...
     -   Make it more responsive
     -   add more examples
+    -   maybe make the links to certifications embedded
 
 For the math notes...
     -   Finish Geometry math notes
