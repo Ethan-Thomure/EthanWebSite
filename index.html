@@ -5,70 +5,143 @@
     <meta charset="utf-8">
     <title>Ethan Thomure</title>
     <style>@import url(styles.css);</style>
-    <script src="scripts.js" type="text/javascript" defer></script>
+    <link rel="icon" type="image/png" href="images/user-circle.png">
+    <!-- box icons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
 </head>
 
 <body>
 
-<header>
-    <nav>
-        <a href="#identification" class="navigation">About</a>
-        <a href="#works" class="navigation">Examples</a>
-        <a href="https://github.com/Ethan-Thomure" class="navigation">Github</a>
+<header class="header">
+    <a href="#" class="logo">Portfolio</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#home" class="active">Home</a>
+        <a href="#about" >About</a>
+        <a href="#certifications">Certificates</a>
+        <a href="#portfolio">Projects</a> <!-- projects == portfolio-->
     </nav>
 </header>
 
-<main>
-    <div id="identification">
-        <img src="images/profile-photo.JPEG" alt="Photo of myself">
-        <div id="identification-information">
-            <h1>Ethan Thomure</h1>
-            <h2>Computer Science Student</h2>
+
+<!-- home section design -->
+<section class="home" id="home">
+    <div class="home-content">
+        <h3>Hello, My Name Is</h3>
+        <h1>Ethan Thomure</h1>
+        <h3>I am a graduate with a Bachelor's in <span>Computer Science</span></h3>
+        <p>It was a 4.0 GPA, and I have a minor in Math. I am familiar with Python, Java, C++, C#, and JavaScript</p>
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/ethan-thomure-90302a178/"><i class='bx bxl-linkedin' ></i></a>
+            <a href="https://github.com/Ethan-Thomure"><i class='bx bxl-github' ></i></a>
+            <!--                <a href="#"></a>-->
+            <!--                <a href="#"></a>-->
+        </div>
+        <a href="images/ThomureResumeWebsite.docx" class="btn">Download Resume</a>
+    </div>
+
+    <div class="home-img">
+        <img src="images/profile-photo.JPEG" alt="Ethan Thomure">
+    </div>
+</section>
+
+<!-- about section design -->
+<section class="about" id="about">
+    <div class="about-img">
+        <img src="images/profile-photo.JPEG" alt="Ethan Thomure">
+    </div>
+
+    <div class="about-content">
+        <h2 class="heading">About <span>Me</span></h2>
+        <h3>Computer Science graduate</h3>
+        <p>The programming languages I am familiar with are: Python, Java, C++, C#, and JavaScript.
+            I am down for just about any kind of computer project, including making a snazzy website.</p>
+        <!--            <a href="#" class="btn">Read More</a>-->
+    </div>
+</section>
+
+<!-- certifications section design -->
+<section class="certifications" id="certifications">
+    <h2 class="heading">My Informal <span>Certifications</span> Via Hyperskill</h2>
+
+    <div class="certifications-container">
+        <div class="certification-box">
+            <i class='bx bxl-javascript' ></i>
+            <h3>Introduction to JavaScript Certification</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>
+            <a href="images/certificates/Introduction_to_JavaScript_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bxl-python' ></i>
+            <h3>Introduction to Python Certification</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>
+            <a href="images/certificates/Introduction_to_Python_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bx-data' ></i>
+            <h3>Introduction to SQL Certification</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>
+            <a href="images/certificates/Introduction_to_SQL_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bxs-data' ></i>
+            <h3>SQL for Data Analysis Certification</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>
+            <a href="images/certificates/SQL_for_Data_Analysis_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bx-analyse' ></i>
+            <h3>Databases with SQL and Python</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>
+            <a href="images/certificates/Databases_with_SQL_and_Python.pdf" target="_blank" class="btn">Look at Certificate</a>
         </div>
     </div>
 
-    <div id="about">
-        <h3>About</h3>
-        <p>I am currently getting a bachelor's in Computer Science with a minor in Mathematics</p>
-        <p>The programming languages I am familiar with are: Python, Java, C++, C#, and JavaScript</p>
-        <p>A specific programming paradigm that I am intrigued by is test-driven development</p>
-        <p>A field of Computer Science that I would like to learn and eventually help develop is quantum computing</p>
-        <p>In spite of my interests, I am down for just about any kind of computer project, including making a website</p>
+</section>
+
+<!-- portfolio section design-->
+<section class="portfolio" id="portfolio">
+    <h2 class="heading">My <span>Projects</span></h2>
+
+    <div class="portfolio-container">
+        <div class="portfolio-box">
+            <img src="images/math-icon.png" alt="Math Notes Example">
+            <div class="portfolio-layer">
+                <h4>Math Notes</h4>
+                <p>This is a collection of my math notes so far. It is far from finished, I am currently working on
+                    geometry. Brackets [] are what I thought my poorly written notes meant, and a question mark (?) means
+                    I really don't know what it meant</p>
+                <a href="EthanMathNotes/index.html"><i class='bx bx-link-external'></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- contact section design -->
+
+<!-- footer design -->
+<footer class="footer">
+    <div class="footer-text">
+        <p>Done with a little help from Codehal</p>
     </div>
 
-    <div id="works">
-        <h3>Examples</h3>
-        <section id="math">
-            <h4>Math Notes</h4>
-            <p>Below is a collection of my math notes so far</p>
-            <p>Note it is far from finished, I am currently working on geometry</p>
-            <p>I plan on getting all of my other notes compiled eventually</p>
-            <aside><strong>Note</strong> brackets [] implies that my original notes didn't make sense, so my current
-                understanding would be inside the brackets, and a question mark (?) means that I could not solve
-                this and would require a reread into the original book when I have time</aside>
-            <p><a href="EthanMathNotes/index.html" class="example">Math Notes</a></p>
-        </section>
-
-        <section id="certifications">
-            <h4>Certifications</h4>
-            <p>Below is a collection of certifications I have earned through an online academy that teaches Computer
-                Science called Hyperskill</p>
-
-            <p><a href="images/Introduction_to_JavaScript_Certificate.pdf" target="_blank" class="example">
-                Introduction to JavaScript Certification</a></p>
-            <p><a href="images/Introduction_to_Python_Certificate.pdf" target="_blank" class="example">
-                Introduction to Python Certification</a></p>
-            <p><a href="images/Introduction_to_SQL_Certificate.pdf" target="_blank" class="example">
-                Introduction to SQL Certification</a></p>
-            <p><a href="images/SQL_for_Data_Analysis_Certificate.pdf" target="_blank" class="example">
-                SQL for Data Analysis Certification</a></p>
-            <p><a href="images/Databases_with_SQL_and_Python.pdf" target="_blank" class="example">
-                Databases with SQL and Python</a></p>
-
-        </section>
-
+    <div class="footer-iconTop">
+        <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
     </div>
-</main>
+</footer>
+
+<!-- scroll reveal -->
+<script src="https://unpkg.com/scrollreveal"></script>
+
+<!-- custom js -->
+<script src="scripts.js"></script>
 
 </body>
 </html>

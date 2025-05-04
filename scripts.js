@@ -1,28 +1,50 @@
-///////////////     Links
+// toggle icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-navigation_links = document.getElementsByClassName("navigation");
-for (let i = 0; i < navigation_links.length; i++) {
-    navigation_links[i].onmouseover = linkMouseOver;
-    navigation_links[i].onmouseleave = navigationDefault;
+menuIcon.onclick = () => {
+    menuIcon.classList.toggle('bx-x')
+    navbar.classList.toggle('active');
 }
 
-example_links = document.getElementsByClassName("example");
-for (let i = 0; i < example_links.length; i++) {
-    example_links[i].onmouseover = linkMouseOver;
-    example_links[i].onmouseleave = exampleDefault;
-}
+// scroll active link
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
 
-function linkMouseOver() {
-    this.style.color = "orange";
-}
+window.onscroll = () => {
+    sections.forEach(sec => {
+        let top = window.scrollY;
+        let offset = sec.offsetTop - 150;
+        let height = sec.offsetHeight;
+        let id = sec.getAttribute('id');
 
-function navigationDefault() {
-    this.style.color = "lightblue";
-}
+        if(top >= offset && top < offset + height) {
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        }
+    });
+    // sticky navbar
+    let header = document.querySelector('header');
 
-function exampleDefault() {
-    this.style.color = "green";
-}
+    header.classList.toggle('sticky', window.scrollY > 100);
 
-//////////////      Cookies
+    // remove toggle icon and navbar when click navbar link (scroll)
+    menuIcon.classList.remove('bx-x')
+    navbar.classList.remove('active');
+};
 
+
+// scroll reveal
+ScrollReveal({
+    // reset: true,
+    distance: '80px',
+    duration: 2000,
+    delay: 200
+});
+
+ScrollReveal().reveal('.home-content, .heading', {origin: 'top'});
+ScrollReveal().reveal('.home-img, .certifications-container, .portfolio-box', {origin: 'bottom'});
+ScrollReveal().reveal('.home-content h1, .about-img', {origin: 'left'});
+ScrollReveal().reveal('.home-content p, .about-content', {origin: 'right'});
