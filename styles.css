@@ -254,10 +254,14 @@ span {
     box-shadow: 0 0 1rem var(--main-color);
     overflow: hidden;
     display: flex;
+
+    height: 100%;
 }
 
 .portfolio-box img {
     width: 100%;
+    height: fit-content;
+    margin: auto;
 }
 
 .portfolio-box:hover img {
