@@ -258,7 +258,7 @@ span {
     overflow: hidden;
     display: flex;
 
-    height: 100%;
+    /*height: 100%;*/
 }
 
 .portfolio-box img {
