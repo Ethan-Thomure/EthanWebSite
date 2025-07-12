@@ -8,181 +8,187 @@
 </head>
 
 <body>
-    <header id="top">
-        <h1>Terms and Definitions</h1>
-        <h2>Navigation</h2>
-        <nav>
-            <a href="../geometry_home.html">Geometry Home</a>
+    <header class="header">
+        <a href="#" class="logo">Definitions</a>
+
+        <i class="bx bx-menu" id="menu-icon"></i>
+
+        <nav class="navbar">
+            <a href="#general-definitions" class="active">General</a>
+            <a href="#angle-definitions" >Angles</a>
+            <a href="#triangle-definitions">Triangles</a>
+            <a href="#polygon-definitions">Polygons</a>
+            <a href="#circle-definitions">Circles</a>
         </nav>
     </header>
 
-    <main>
+    <section id="general-definitions">
+        <h2>General Definitions</h2>
+        <dl>
+                <dt>Ahmes</dt>
+                <dd>Wrote 'Manuscript of Geometry' 1550</dd>
 
-        <h2>Content</h2>
-        <h3>General Definitions</h3>
-        <dl id="general-definitions">
-            <dt>Ahmes</dt>
-            <dd>Wrote 'Manuscript of Geometry' 1550</dd>
+                <dt>Geometry</dt>
+                <dd>Earth Science</dd>
+                <dd>Study that deals with the properties, measurements, and construction of flat and solid figures</dd>
 
-            <dt>Geometry</dt>
-            <dd>Earth Science</dd>
-            <dd>Study that deals with the properties, measurements, and construction of flat and solid figures</dd>
+                <dt>Euclid</dt>
+                <dd>Wrote 'Elements' in 300 BC</dd>
 
-            <dt>Euclid</dt>
-            <dd>Wrote 'Elements' in 300 BC</dd>
+                <dt id="line">Line</dt>
+                <dd>Intersection of two flat surfaces</dd>
+                <dd><a href="definitions-images/line.png" target="_blank"><img src="definitions-images/line.png" alt="Image of two surfaces intersecting, creating a line"></a></dd>
 
-            <dt id="line">Line</dt>
-            <dd>Intersection of two flat surfaces</dd>
-            <dd><a href="definitions-images/line.png" target="_blank"><img src="definitions-images/line.png" alt="Image of two surfaces intersecting, creating a line"></a></dd>
+                <dt id="point">Point</dt>
+                <dd>Intersection of two straight <a href="#line">lines</a></dd>
+                <dd><a href="definitions-images/point.png" target="_blank"><img src="definitions-images/point.png" alt="Image of two lines intersecting, creating a point"></a></dd>
 
-            <dt id="point">Point</dt>
-            <dd>Intersection of two straight <a href="#line">lines</a></dd>
-            <dd><a href="definitions-images/point.png" target="_blank"><img src="definitions-images/point.png" alt="Image of two lines intersecting, creating a point"></a></dd>
+                <dt id="geometric-figure">Geometric figure</dt>
+                <dd>Shape</dd>
 
-            <dt id="geometric-figure">Geometric figure</dt>
-            <dd>Shape</dd>
+                <dt>Geometric magnitude</dt>
+                <dd>size</dd>
 
-            <dt>Geometric magnitude</dt>
-            <dd>size</dd>
+                <dt>Constant</dt>
+                <dd>Quantity that remains the same throughout the problem</dd>
 
-            <dt>Constant</dt>
-            <dd>Quantity that remains the same throughout the problem</dd>
+                <dt id="line-segment">Line segment</dt>
+                <dd>Limited portion of a <a href="#line">line</a></dd>
+                <dd><a href="definitions-images/line-segment.png" target="_blank"><img src="definitions-images/line-segment.png" alt="Image of a line bounded by two points"></a></dd>
 
-            <dt id="line-segment">Line segment</dt>
-            <dd>Limited portion of a <a href="#line">line</a></dd>
-            <dd><a href="definitions-images/line-segment.png" target="_blank"><img src="definitions-images/line-segment.png" alt="Image of a line bounded by two points"></a></dd>
+                <dt id="equal-segment">Equal segments</dt>
+                <dd><a href="#line-segment">Line segments</a> whose end <a href="#point">points</a> can be made to coincide</dd>
+                <dd><a href="definitions-images/equal-segment.png" target="_blank"><img src="definitions-images/equal-segment.png" alt="Image of two equal lines"></a></dd>
 
-            <dt id="equal-segment">Equal segments</dt>
-            <dd><a href="#line-segment">Line segments</a> whose end <a href="#point">points</a> can be made to coincide</dd>
-            <dd><a href="definitions-images/equal-segment.png" target="_blank"><img src="definitions-images/equal-segment.png" alt="Image of two equal lines"></a></dd>
+                <dt id="mid-point">Mid point</dt>
+                <dd>A <a href="#point">point</a> that divides a <a href="#line-segment">line</a> into two <a href="#equal-segment">equal segments</a></dd>
+                <dd><a href="definitions-images/mid-point.png" target="_blank"><img src="definitions-images/mid-point.png" alt="Image a line divided into two equal segments by a point"></a></dd>
 
-            <dt id="mid-point">Mid point</dt>
-            <dd>A <a href="#point">point</a> that divides a <a href="#line-segment">line</a> into two <a href="#equal-segment">equal segments</a></dd>
-            <dd><a href="definitions-images/mid-point.png" target="_blank"><img src="definitions-images/mid-point.png" alt="Image a line divided into two equal segments by a point"></a></dd>
+                <dt id="bisector">Bisector</dt>
+                <dd>A <a href="#line-segment">line</a> that divides a line into two <a href="#equal-segment">equal segments</a></dd>
+                <dd><a href="definitions-images/line-bisector.png" target="_blank"><img src="definitions-images/line-bisector.png" alt="Image of a line cutting a line into two equal segments"></a></dd>
 
-            <dt id="bisector">Bisector</dt>
-            <dd>A <a href="#line-segment">line</a> that divides a line into two <a href="#equal-segment">equal segments</a></dd>
-            <dd><a href="definitions-images/line-bisector.png" target="_blank"><img src="definitions-images/line-bisector.png" alt="Image of a line cutting a line into two equal segments"></a></dd>
+                <dt id="congruence">Congruence / Congruent</dt>
+                <dd>Figures with same size and shape</dd>
+                <dd>May be made to coincide throughout</dd>
 
-            <dt id="congruence">Congruence / Congruent</dt>
-            <dd>Figures with same size and shape</dd>
-            <dd>May be made to coincide throughout</dd>
+                <dt id="axiom">Axiom</dt>
+                <dd>General statement accepted without proof to be true</dd>
 
-            <dt id="axiom">Axiom</dt>
-            <dd>General statement accepted without proof to be true</dd>
+                <dt id="postulate">Postulate</dt>
+                <dd>Geometric assumption accepted without proof to be true</dd>
 
-            <dt id="postulate">Postulate</dt>
-            <dd>Geometric assumption accepted without proof to be true</dd>
+                <dt id="proof">Proof</dt>
+                <dd>Process of resoning whereby truth of a theorem or correctness of a construction is established</dd>
 
-            <dt id="proof">Proof</dt>
-            <dd>Process of resoning whereby truth of a theorum or correctness of a construction is established</dd>
+                <dt id="correllary">Correllary</dt>
+                <dd>A geometric statement that is easily deduced from the theorem just <a href="#proof">proven</a></dd>
 
-            <dt id="correllary">Correllary</dt>
-            <dd>A geometric statement that is easily deduced from the theorum just <a href="#proof">proven</a></dd>
+                <dt>Auxiliary Line</dt>
+                <dd>An imaginary <a href="#line-segment">line</a> with only one assumed <a href="#angle">angle</a>?</dd>
+                <dd><a href="definitions-images/auxiliary-line.png" target="_blank"><img src="definitions-images/auxiliary-line.png" alt="Image of a shape with an auxiliary line making an angle in that shape"></a></dd>
 
-            <dt>Auxiliary Line</dt>
-            <dd>An imaginary <a href="#line-segment">line</a> with only one assumed <a href="#angle">angle</a>?</dd>
-            <dd><a href="definitions-images/auxiliary-line.png" target="_blank"><img src="definitions-images/auxiliary-line.png" alt="Image of a shape with an auxiliary line making an angle in that shape"></a></dd>
+                <dt>Converse statement</dt>
+                <dd>A statement formed from another statement by interchanging its hypothesis and conclusion</dd>
 
-            <dt>Converse statement</dt>
-            <dd>A statement formed from another statement by interchanging its hypothesis and conclusion</dd>
+                <dt id="transversal">Transversal</dt>
+                <dd>A <a href="#line-segment">line</a> that intersects 2 or more other lines</dd>
+                <dd><a href="definitions-images/transversal.png" target="_blank"><img src="definitions-images/transversal.png" alt="Image of a line intersecting two other lines"></a></dd>
 
-            <dt id="transversal">Transversal</dt>
-            <dd>A <a href="#line-segment">line</a> that intersects 2 or more other lines</dd>
-            <dd><a href="definitions-images/transversal.png" target="_blank"><img src="definitions-images/transversal.png" alt="Image of a line intersecting two other lines"></a></dd>
+                <dt id="locus">Locus (Loci plural)</dt>
+                <dd>Location of all <a href="#point">points</a> and only those points to satisfy the condition</dd>
 
-            <dt id="locus">Locus (Loci plural)</dt>
-            <dd>Location of all <a href="#point">points</a> and only those points to satisfy the condition</dd>
+                <dt>Distance postulates? (may be examples of <a href="#locus">Loci</a>)</dt>
+                <dd>Shortest distance between two <a href="#point">points</a> [is a <a href="#line">straight line</a>]</dd>
+                <dd>Distance between a <a href="#point">point</a> and a <a href="#line">line</a> [is the shortest line from the point to any point on the line]</dd>
+                <dd>Shortest distance between two <a href="#parallel">parallel lines</a> [can really be any <a href="#perpendicular">perpendicular line</a> between the two]</dd>
+            </dl>
+        </section>
+    <section id="angle-definitions">
+        <h2>Angle Definitions</h2>
+        <dl>
+                <dt id="angle">Angle</dt>
+                <dd>A figure formed by two straight <a href="#line">lines</a> drawn from the same <a href="#point">point</a></dd>
+                <dd><a href="definitions-images/angle.png" target="_blank"><img src="definitions-images/angle.png" alt="Image two straight lines forming an angle"></a></dd>
 
-            <dt>Distance postulates? (may be examples of <a href="#locus">Loci</a>)</dt>
-            <dd>Shortest distance between two <a href="#point">points</a> [is a <a href="#line">straight line</a>]</dd>
-            <dd>Distance between a <a href="#point">point</a> and a <a href="#line">line</a> [is the shortest line from the point to any point on the line]</dd>
-            <dd>Shortest distance between two <a href="#parallel">parallel lines</a> [can really be any <a href="#perpendicular">perpendicular line</a> between the two]</dd>
-        </dl>
+                <dt id="vertex">Vertex</dt>
+                <dd>The <a href="#point">point</a> from which an <a href="#angle">angle</a> is drawn from</dd>
 
-        <h3>Angle Definitions</h3>
-        <dl id="angle-definitions">
-            <dt id="angle">Angle</dt>
-            <dd>A figure formed by two straight <a href="#line">lines</a> drawn from the same <a href="#point">point</a></dd>
-            <dd><a href="definitions-images/angle.png" target="_blank"><img src="definitions-images/angle.png" alt="Image two straight lines forming an angle"></a></dd>
+                <dt id="equal-angle">Equal angle (equiangular)</dt>
+                <dd><a href="#angle">Angle</a> whose sides can be made to coinside</dd>
 
-            <dt id="vertex">Vertex</dt>
-            <dd>The <a href="#point">point</a> from which an <a href="#angle">angle</a> is drawn from</dd>
+                <dt id="angle-bisector">Angle bisector</dt>
+                <dd>A <a href="#line">line</a> drawn from the <a href="#vertex">vertex</a> that divides an
+                    <a href="#angle">angle</a> into two <a href="#equal-segment">equal parts</a>. Each half is part of the whole</dd>
+                <!--Add an image here-->
 
-            <dt id="equal-angle">Equal angle (equiangular)</dt>
-            <dd><a href="#angle">Angle</a> whose sides can be made to coinside</dd>
+                <dt id="perigon">Perigon</dt>
+                <dd>A <a href="#line">line</a> that makes a complete rotation</dd>
+                <!--Add an image here-->
 
-            <dt id="angle-bisector">Angle bisector</dt>
-            <dd>A <a href="#line">line</a> drawn from the <a href="#vertex">vertex</a> that divides an
-                <a href="#angle">angle</a> into two <a href="#equal-segment">equal parts</a>. Each half is part of the whole</dd>
-            <!--Add an image here-->
+                <dt id="straight-angle">Straight angle</dt>
+                <dd>An <a href="#angle">angle</a> whose sides form a straight <a href="#line">line</a> through the <a href="#vertex">vertex</a></dd>
+                <!--Add an image here-->
 
-            <dt id="perigon">Perigon</dt>
-            <dd>A <a href="#line">line</a> that makes a complete rotation</dd>
-            <!--Add an image here-->
+                <dt id="adjacent-angle">Adjacent angles</dt>
+                <dd><a href="#angle">Angles</a> with the same <a href="#vertex">vertex</a> and a common side between them</dd>
+                <!--Add an image here-->
 
-            <dt id="straight-angle">Straight angle</dt>
-            <dd>An <a href="#angle">angle</a> whose sides form a straight <a href="#line">line</a> through the <a href="#vertex">vertex</a></dd>
-            <!--Add an image here-->
+                <dt id="right-angle">Right angle</dt>
+                <dd><a href="#angle">Angle</a> formed when two straight <a href="#line">lines</a> meet to form two
+                    <a href="#equal-angle">equal</a> <a href="#adjacent-angle">adjacent angles</a> (90 degrees)</dd>
+                <!--Add an image here-->
 
-            <dt id="adjacent-angle">Adjacent angles</dt>
-            <dd><a href="#angle">Angles</a> with the same <a href="#vertex">vertex</a> and a common side between them</dd>
-            <!--Add an image here-->
+                <dt id="perpendicular">Perpendicular lines</dt>
+                <dd><a href="#line">Lines</a> that meet to form <a href="#right-angle">right angles</a> ( _|_ ). AC _|_ BD</dd>
+                <!--Add an image here-->
 
-            <dt id="right-angle">Right angle</dt>
-            <dd><a href="#angle">Angle</a> formed when two straight <a href="#line">lines</a> meet to form two
-                <a href="#equal-angle">equal</a> <a href="#adjacent-angle">adjacent angles</a> (90 degrees)</dd>
-            <!--Add an image here-->
+                <dt id="parallel">Parallel Lines</dt>
+                <dd>Two <a href="#line">lines</a> which never meet. AB || CD</dd>
+                <!--Add an image here-->
 
-            <dt id="perpendicular">Perpendicular lines</dt>
-            <dd><a href="#line">Lines</a> that meet to form <a href="#right-angle">right angles</a> ( _|_ ). AC _|_ BD</dd>
-            <!--Add an image here-->
+                <dt id="acute-angle">Acute angle</dt>
+                <dd><a href="#angle">Angle</a> less than a <a href="#right-angle">right angle</a></dd>
+                <dd>0 degrees < Acute angle < 90 degrees</dd>
 
-            <dt id="parallel">Parallel Lines</dt>
-            <dd>Two <a href="#line">lines</a> which never meet. AB || CD</dd>
-            <!--Add an image here-->
+                <dt id="obtuse-angle">Obtuse angle</dt>
+                <dd><a href="#angle">Angle</a> greater than a <a href="#right-angle">right angle</a> and less than a
+                    <a href="#straight-angle">straight angle</a></dd>
+                <dd>90 degrees < obtuse angle < 180 degrees</dd>
 
-            <dt id="acute-angle">Acute angle</dt>
-            <dd><a href="#angle">Angle</a> less than a <a href="#right-angle">right angle</a></dd>
-            <dd>0 degrees < Acute angle < 90 degrees</dd>
+                <dt>Reflex angle</dt>
+                <dd><a href="#angle">Angle</a> greater than a <a href="#straight-angle">straight angle</a> and less than a <a href="#perigon">perigon</a></dd>
+                <dd>180 degrees < reflex angle < 360 degrees</dd>
+                <!--Add an image here-->
 
-            <dt id="obtuse-angle">Obtuse angle</dt>
-            <dd><a href="#angle">Angle</a> greater than a <a href="#right-angle">right angle</a> and less than a
-                <a href="#straight-angle">straight angle</a></dd>
-            <dd>90 degrees < obtuse angle < 180 degrees</dd>
+                <dt>Oblique angle</dt>
+                <dd><a href="#angle">Angle</a> whose sides are neither <a href="#parallel">parralel</a> nor <a href="#perpendicular">perpendicular</a></dd>
 
-            <dt>Reflex angle</dt>
-            <dd><a href="#angle">Angle</a> greater than a <a href="#straight-angle">straight angle</a> and less than a <a href="#perigon">perigon</a></dd>
-            <dd>180 degrees < reflex angle < 360 degrees</dd>
-            <!--Add an image here-->
+                <dt id="complimentary-angle">Complimentary angles</dt>
+                <dd>Two <a href="#angle">angles</a> whose sum is a <a href="#right-angle">right angle</a></dd>
+                <!--Add an image here-->
 
-            <dt>Oblique angle</dt>
-            <dd><a href="#angle">Angle</a> whose sides are neither <a href="#parallel">parralel</a> nor <a href="#perpendicular">perpendicular</a></dd>
+                <dt id="supplementary-angle">Supplementary angles</dt>
+                <dd>Two <a href="#angle">angles</a> whose sum is a <a href="#straight-angle">straight angle</a></dd>
+                <!--Add an image here-->
 
-            <dt id="complimentary-angle">Complimentary angles</dt>
-            <dd>Two <a href="#angle">angles</a> whose sum is a <a href="#right-angle">right angle</a></dd>
-            <!--Add an image here-->
+                <dt id="vertical-angle">Vertical angles</dt>
+                <dd>The non-<a href="#adjacent-angle">adjacent angles</a> formed when 2 straight <a href="#line">lines</a> intersect</dd>
+                <!--Add an image here-->
 
-            <dt id="supplementary-angle">Supplementary angles</dt>
-            <dd>Two <a href="#angle">angles</a> whose sum is a <a href="#straight-angle">straight angle</a></dd>
-            <!--Add an image here-->
+                <dt id="exterior-angle">Exterior Angles</dt>
+                <dd>On a <a href="#polygon">polygon</a>, it is the
+                    <a href="#angle">angle</a> formed by one side and the extension of the <a href="#adjacent-side">adjacent side</a> of that polygon</dd>
 
-            <dt id="vertical-angle">Vertical angles</dt>
-            <dd>The non-<a href="#adjacent-angle">adjacent angles</a> formed when 2 straight <a href="#line">lines</a> intersect</dd>
-            <!--Add an image here-->
-
-            <dt id="exterior-angle">Exterior Angles</dt>
-            <dd>On a <a href="#polygon">polygon</a>, it is the 
-            <a href="#angle">angle</a> formed by one side and the extension of the <a href="#adjacent-side">adjacent side</a> of that polygon</dd>
-
-            <dt>[Conversions]</dt>
-            <dd>1 degree = 1 / 360 of a circle</dd>
-            <dd>1 degree = 60' = 360"</dd>
-            <dd>1' = 60"</dd>
-        </dl>
-
-        <h3>Triangle Definitions</h3>
-        <dl id="triangle-definitions">
+                <dt>[Conversions]</dt>
+                <dd>1 degree = 1 / 360 of a circle</dd>
+                <dd>1 degree = 60' = 360"</dd>
+                <dd>1' = 60"</dd>
+            </dl>
+    </section>
+    <section id="triangle-definitions">
+        <h2>Triangle Definitions</h2>
+        <dl>
             <dt id="triangle">Triangle</dt>
             <dd>A figure bounded by three straight <a href="#line">lines</a></dd>
 
@@ -241,9 +247,10 @@
                 the center of this is the center of the <a href="#inscribed-polygon">inscribed</a> <a href="#circle">circle</a>]
             </dd>
         </dl>
-
-        <h3>Polygon Definitions</h3>
-        <dl id="polygon-definitions">
+    </section>
+    <section id="polygon-definitions">
+        <h2>Polygon Definitions</h2>
+        <dl>
             <dt id="polygon">Polygon (p-gon)(n-gon)</dt>
             <dd>A figure bounded by straight <a href="#line">lines</a></dd>
 
@@ -293,9 +300,10 @@
             <dt id="altitude">Altitude</dt>
             <dd>A <a href="#line">line</a> from the <a href="#vertex">vertex</a> to the "opposite" side and is <a href="#perpendicular">perpendicular</a> to that side</dd>
         </dl>
-
-        <h3>Circle Definitions</h3>
-        <dl id="circle-definitions">
+    </section>
+    <section id="circle-definitions">
+        <h2>Circle Definitions</h2>
+        <dl>
             <dt id="circle">Circle</dt>
             <dd>A closed curve all of whose <a href="#point">points</a> are equally distant (equidistant) from a fixed point
                 called the center</dd>
@@ -377,10 +385,17 @@
             <dt id="common-chord">Common Chord</dt>
             <dd>A <a href="#chord">chord</a> that is a chord for two circles</dd>
         </dl>
-    </main>
+    </section>
 
-    <footer>
-        <p><a href="#top">[Back to Top]</a></p>
+
+    <footer class="footer">
+
+        <div class="footer-iconTop">
+            <a href="../geometry_home.html"><i class='bx bx-up-arrow-alt'>Back</i></a>
+        </div>
     </footer>
+
+<!--Javascript-->
+    <script src="../../../scripts.js"></script>
 </body>
 </html>

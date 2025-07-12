@@ -1,12 +1,7 @@
-For the home page...
-    -   add more examples
-
 For the math notes...
     -   Finish Geometry math notes
-        -   Either remove all target=_blank, or make it consistent
         -   fix the (?)
         -   Add more and better pictures
-        -   add top navigation bar, maybe make it "sticky"
         -   add definition for similar (~), then add links to this where it says "similar"
         -   add definition for leg and hypotenuse, then add links to this where it says "leg" (specifically for a triangle)
         -   add definition for mean proportional, then add links to this where it says "mean proportional"
