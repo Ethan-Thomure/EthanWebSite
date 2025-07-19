@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Trigonometric Identities</title>
+    <style>@import url(../precalculus_styles.css);</style>
+    <script src="plots.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+<header class="header">
+    <a href="#" class="logo">Trigonometric Identities</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#trig-functions" class="active">Trig Functions</a>
+        <a href="#trig-identities" >Trig Identities</a>
+        <a href="#same-co">Same vs Co</a>
+        <a href="#domain-range">Domain and Range</a>
+    </nav>
+</header>
+
+    <section id="trig-functions">
+        <h2>Trig Functions</h2>
+
+        <dl>
+            <dt>Sine Function</dt>
+            <div id="sine" class="graph"></div>
+            <script>graph("Math.sin(x)", "sine", [0, 2 * Math.PI], [-1, 1]);</script>
+
+            <dt>Cosine Function</dt>
+            <div id="cosine" class="graph"></div>
+            <script>graph("Math.cos(x)", "cosine", [0, 2 * Math.PI], [-1, 1]);</script>
+
+            <dt>Tangent Function</dt>
+            <div id="tan" class="graph"></div>
+            <script>graph("Math.tan(x)", "tan", [0, 2 * Math.PI], [-5, 5]);</script>
+        </dl>
+    </section>
+
+    <section id="trig-identities">
+        <h2>Trig Identities</h2>
+
+        <dl>
+            <dt>Fundamental Identities (8 of them)</dt>
+            <dd>Reciprocal (3)</dd>
+            <dd>Quotient (2)</dd>
+            <dd>Pythagorean (3)</dd>
+
+            <dt>Reciprocal Identities</dt>
+            <dd>$$ \sec{\theta} = \frac{1}{\cos{\theta}} $$</dd>
+            <dd>$$ \cot{\theta} = \frac{1}{\tan{\theta}} $$</dd>
+            <dd>$$ \csc{\theta} = \frac{1}{\sin{\theta}} $$</dd>
+
+            <dt>Quotient Identities</dt>
+            <dd>$$ \tan{\theta} = \frac{\sin{\theta}}{\cos{\theta}} $$</dd>
+            <dd>$$ \cot{\theta} = \frac{\cos{\theta}}{\sin{\theta}} $$</dd>
+
+            <dt>Pythagorean Identities</dt>
+            <dd>$$ \sin^2{\theta} + \cos^2{\theta} = 1 $$</dd>
+            <dd>$$ 1 + \tan^2{\theta} = \sec^2{\theta} $$</dd>
+            <dd>$$ 1 + \cot^2{\theta} = \csc^2{\theta} $$</dd>
+
+            <dt>Sum and Difference Identities</dt>
+            <dd>(if you know the rhyme...) "Sine Cosine Cosine Sine, Cosine Cosine SIGN Sine Sine"</dd>
+            <dd>$$ \sin{(\theta \pm \phi)} = \sin{\theta} \cos{\phi} \pm \cos{\theta} \sin{\phi} $$</dd>
+            <dd>$$ \cos{(\theta \pm \phi)} = \cos{\theta} \cos{\phi} \pm \sin{\theta} \sin{\phi} $$</dd>
+            <dd>$$ \tan{(\theta \pm \phi)} = \frac{\sin{(\theta \pm \phi)}}{\cos{(\theta \pm \phi)}}
+                = \frac{\tan{\theta} \pm \tan{\phi}}{1 \pm \tan{\theta} \tan{\phi}} $$</dd>
+
+            <dt>Double Angle Identities</dt>
+            <dd>$$ \sin{2\theta} = 2\sin{\theta} \cos{\theta} $$</dd>
+            <dd>$$ \cos{2\theta} = \cos^2{\theta} - \sin^2{\theta} = 2\cos^2{\theta} - 1 = 1 - 2\sin^2{\theta} $$</dd>
+            <dd>$$ \tan{2\theta} = \frac{2\tan{\theta}}{1 - \tan^2{\theta}} $$</dd>
+
+            <dt>Negative Angle Identities (Odd)</dt>
+            <dd>$$ \sin{(-\theta)} = -\sin{\theta} $$</dd>
+            <dd>$$ \tan{(-\theta)} = -\tan{\theta} $$</dd>
+            <dd>$$ \cot{(-\theta)} = -\cot{\theta} $$</dd>
+            <dd>$$ \csc{(-\theta)} = -\csc{\theta} $$</dd>
+
+            <dt>Negative Angle Identities (Even)</dt>
+            <dd>$$ \cos{(-\theta)} = \cos{\theta} $$</dd>
+            <dd>$$ \sec{(-\theta)} = \sec{\theta} $$</dd>
+
+            <dt>Half Angle Identities</dt>
+            <dd>$$ \sin{(\frac{\theta}{2})} = \pm \sqrt{\frac{1 - \cos{\theta}}{2}} $$</dd>
+            <dd>$$ \cos{(\frac{\theta}{2})} = \pm \sqrt{\frac{1 + \cos{\theta}}{2}} $$</dd>
+            <dd>$$ \tan{(\frac{\theta}{2})} = \pm \sqrt{\frac{1 - \cos{\theta}}{1 + \cos \theta}}
+            = \frac{1 - \cos{\theta}}{\sin{\theta}} = \frac{\sin{\theta}}{1 + \cos{\theta}} $$</dd>
+
+            <dt>Product to Sum</dt>
+            <dd>$$ \sin{\alpha} \sin{\beta} = \frac{\cos{(\alpha - \beta)} - \cos{(\alpha + \beta)}}{2} $$</dd>
+            <dd>$$ \cos{\alpha} \cos{\beta} = \frac{\cos{(\alpha - \beta)} + \cos{(\alpha + \beta)}}{2} $$</dd>
+            <dd>$$ \sin{\alpha} \cos{\beta} = \frac{\sin{(\alpha - \beta)} + \sin{(\alpha - \beta)}}{2} $$</dd>
+
+            <dt>Sum to Product</dt>
+            <dd>$$ \sin{\theta} \pm \sin{\phi} = 2\sin{(\frac{\theta \pm \phi}{2})} \cos{(\frac{\theta \pm \phi}{2})} $$</dd>
+            <dd>$$ \cos{\theta} + \cos{\phi} = 2\cos{(\frac{\theta + \phi}{2})} \cos{(\frac{\theta - \phi}{2})} $$</dd>
+            <dd>$$ \cos{\theta} - \cos{\phi} = -2\sin{(\frac{\theta + \phi}{2})} \sin{(\frac{\theta - \phi}{2})} $$</dd>
+
+            <dt>Example Problem: $$ \cos{15^\circ} $$</dt>
+            <dd>$$ = \cos{(60^\circ - 45^\circ)} $$</dd>
+            <dd>$$ = \cos{60^\circ} \cos{45^\circ} + \sin{60^\circ} \sin{45^\circ} $$</dd>
+            <dd>$$ = \frac{1}{2} \times \frac{\sqrt{2}}{2} + \frac{\sqrt{3}}{2} \times \frac{\sqrt{2}}{2} $$</dd>
+            <dd>$$ = \frac{\sqrt{2}}{4} + \frac{\sqrt{6}}{4} $$</dd>
+            <dd>$$ = \frac{\sqrt{2} + \sqrt{6}}{4} $$</dd>
+
+            <dt>When Asked for Verification</dt>
+            <dd>Work only on one side to get it to equal the other</dd>
+
+            <dt>When Asked for Trig Equations</dt>
+            <dd>Work on both sides to get them equal</dd>
+
+            <dt>Extra</dt>
+            <dd>$$ \sin{\theta} = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$</dd>
+        </dl>
+    </section>
+
+    <section id="same-co">
+        <h2>Same vs Co</h2>
+<!--TODO: Add pictures-->
+        <dl>
+            <dt><span>S</span>ame trig function</dt>
+            <dd>Quadrant I: $$ \theta = \rho $$</dd>
+            <dd>Quadrant II: $$ \theta = 180^\circ - \rho = \pi - \rho $$</dd>
+            <dd>Quadrant III: $$ \theta = 180^\circ + \rho = \pi + \rho $$</dd>
+            <dd>Quadrant IV: $$ \theta = 360^\circ - \rho = \pi - \rho $$</dd>
+
+            <dt><span>C</span>O trig function</dt>
+            <dd>Quadrant I: $$ \theta = 90^\circ - \rho = \frac{\pi}{2} - \rho $$</dd>
+            <dd>Quadrant II: $$ \theta = 90^\circ + \rho = \frac{\pi}{2} + \rho $$</dd>
+            <dd>Quadrant III: $$ \theta = 270^\circ - \rho = \frac{3\pi}{2} - \rho $$</dd>
+            <dd>Quadrant IV: $$ \theta = 270^\circ + \rho = \frac{3\pi}{2} + \rho $$</dd>
+        </dl>
+
+    </section>
+
+    <section id="domain-range">
+        <h2>Domains and Ranges</h2>
+
+        <dl>
+            <dt>Sine</dt>
+            <dd>Domain: $$ [-\frac{\pi}{2}, \frac{\pi}{2}] $$</dd>
+            <dd>Range: $$ [-1, 1] $$</dd>
+
+            <dt>Cosine</dt>
+            <dd>Domain: $$ [0, \pi] $$</dd>
+            <dd>Range: $$ [-1, 1] $$</dd>
+
+            <dt>Tangent</dt>
+            <dd>Domain: $$ (-\frac{\pi}{2}, \frac{\pi}{2}) $$</dd>
+            <dd>Range: $$ (-\infty, \infty) $$</dd>
+
+            <dt>Cosecant</dt>
+            <dd>Domain: $$ [-\frac{\pi}{2}, \frac{\pi}{2}], \theta \neq 0$$</dd>
+            <dd>Range: $$ (-\infty, -1], [1, \infty) $$</dd>
+
+            <dt>Secant</dt>
+            <dd>Domain: $$ [0, \pi], \theta \neq 0$$</dd>
+            <dd>Range: $$ (-\infty, -1], [1, \infty) $$</dd>
+
+            <dt>Cotangent</dt>
+            <dd>Domain: $$ (0, \pi) $$</dd>
+            <dd>Range: $$ (-\infty, \infty) $$</dd>
+        </dl>
+
+    </section>
+
+<!--    <section id="even-odd">-->
+<!--        <h2>Even vs Odd vs func vs nonfunc vs vlt vs hlt vs periodic ?locus and line stuff too? (move to new page?)</h2>-->
+<!--    </section>-->
+<footer class="footer">
+
+    <div class="footer-iconTop">
+        <a href="../precalculus-home.html"><i class='bx bx-up-arrow-alt'>Back</i></a>
+    </div>
+</footer>
+
+<!--Javascript-->
+<script src="../../../scripts.js"></script>
+</body>
+</html>

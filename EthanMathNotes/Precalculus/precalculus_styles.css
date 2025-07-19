@@ -97,11 +97,11 @@ span {
 }
 
 /*/////////////////////////////////////////////////////////////////////*/
-.geometries h2 {
+.precalcs h2 {
     margin-bottom: 5rem;
 }
 
-.geometries-container {
+.precalc-container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -109,7 +109,7 @@ span {
     gap: 2rem;
 }
 
-.geometries-container .geometry-box {
+.precalc-container .precalc-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
     padding: 3rem 2rem 4rem;
@@ -122,21 +122,21 @@ span {
     max-width: 30rem;
 }
 
-.geometries-container .geometry-box:hover {
+.precalc-container .precalc-box:hover {
     border-color: var(--main-color);
     transform: scale(1.02);
 }
 
-.geometry-box i {
+.precalc-box i {
     font-size: 7rem;
     color: var(--main-color);
 }
 
-.geometry-box h3 {
+.precalc-box h3 {
     font-size: 2.6rem;
 }
 
-.geometry-box p {
+.precalc-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
@@ -215,7 +215,7 @@ dd {
     }
 
     /*///////////////////////////////////////////////////*/
-    .geometries {
+    .precalcs {
         padding-bottom: 7rem;
     }
 
@@ -252,7 +252,7 @@ dd {
         margin: 3rem 0;
     }
 /*////////////////////////////////////////////////////////*/
-    .geometries h2 {
+    .precalcs h2 {
         margin-bottom: 3rem;
     }
 }
