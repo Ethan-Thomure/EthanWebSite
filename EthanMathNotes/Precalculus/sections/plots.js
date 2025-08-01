@@ -13,10 +13,23 @@ function graph(exp, name, domain, range) {
 // Display using Plotly
     const data = [{x:xValues, y:yValues, mode:"lines"}];
     const layout = {
-        title: "y = " + exp,
-        xaxis: {title: "x", range: domain},
-        yaxis: {title: "y", range: range},
+        title: {text: "y = " + exp},
+        xaxis: {
+            title: {text: "x"},
+            range: domain
+        },
+        yaxis: {
+            title: {text: "y"},
+            range: range
+        },
         width: 800
     };
-    Plotly.newPlot(name, data, layout);
+
+    const config = {
+        displayModeBar: false,
+        staticPlot: true,
+        showticklabels: true
+    };
+
+    Plotly.newPlot(name, data, layout, config);
 }
