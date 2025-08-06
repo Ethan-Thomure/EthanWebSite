@@ -476,6 +476,10 @@ span {
 }
 
 @media (max-width: 365px) {
+    html {
+        margin: 1px;
+    }
+
     .home-img img {
         width: 90vw;
     }
