@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Trigonometric Identities</title>
+    <title>Equation Forms</title>
     <style>@import url(../precalculus_styles.css);</style>
     <script src="plots.js"></script>
     <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
@@ -14,7 +14,7 @@
 <body>
 
 <header class="header">
-    <a href="#" class="logo">Trigonometric Identities</a>
+    <a href="#" class="logo">Equation Forms</a>
 
     <i class="bx bx-menu" id="menu-icon"></i>
 
@@ -22,24 +22,220 @@
         <a href="#even-odd" class="active">Even vs Odd</a> <!-- periodic too! -->
         <a href="#func-nonfunc" >Functions vs Nonfunctions</a> <!-- vlt vs hlt -->
         <a href="#locus">Locus</a>
-        <a href="#intercept-symmetry-domain">Finding Intercepts, Symmetry, Domains</a>
+        <a href="#intercept-symmetry-domain">Forms, Intercepts, Symmetry, Domains</a>
     </nav>
 </header>
 
     <section id="even-odd">
         <h2>Even vs Odd</h2>
+
+        <dl>
+            <dt>Even</dt>
+            <dd>$$ f(-x) = f(x) $$</dd>
+            <dd>$$ \cos{(-\theta)} = \cos{\theta} $$</dd>
+
+            <dt>Odd</dt>
+            <dd>$$ f(-x) = -f(x) $$</dd>
+            <dd>$$ \sin{(-\theta)} = -\sin{(\theta)} $$</dd>
+
+            <dt>Example of Neither</dt>
+            <dd>$$ f(x) = (x - 1)^2 $$</dd>
+            <dd>$$ f(x) = x^2 -2x + 1 $$</dd>
+            <dd>$$ f(-x) = (-x)^2 -2(-x) + 1 $$</dd>
+            <dd>$$ f(-x) = x^2 + 2x + 1 \ne x^2 - 2x + 1$$</dd>
+            <dd>$$ \therefore f(-x) \ne f(x)$$</dd>
+        </dl>
     </section>
 
     <section id="func-nonfunc">
         <h2>Functions vs Nonfunctions</h2>
+
+        <dl>
+            <dt>Vertical Line Test (VLT)</dt>
+            <dd>To test for if it is a function</dd>
+
+            <dt>Horizontal Line Test (HLT)</dt>
+            <dd>To test for if it's inverse is a function</dd>
+
+            <dt>Example 1</dt>
+            <div id="parabola" class="graph"></div>
+            <script>graph("Math.pow(x, 2)", "parabola", [-2, 2], [-1, 3]);</script>
+            <dd>$$ E = f $$</dd>
+            <dd>$$ E^{-1} \ne f^{-1} $$</dd>
+            <dd>$$ \therefore function $$</dd>
+
+            <dt>Example 2</dt>
+            <div id="log" class="graph"></div>
+            <script>graph("Math.log(x + 1)", "log", [0, 2], [0, 1]);</script>
+            <dd>$$ E = f $$</dd>
+            <dd>$$ E^{-1} = f^{-1} $$</dd>
+            <dd>$$ \therefore function $$</dd>
+
+            <dt>Example 3</dt>
+            <div id="sine" class="graph"></div>
+            <script>graph("Math.sin(x)", "sine", [-2, 2], [-1, 1]);</script>
+            <dd>$$ E = f $$</dd>
+            <dd>$$ E^{-1} = f^{-1} $$</dd>
+            <dd>$$ \therefore function $$
+
+            <dt>Example 4</dt>
+            <div id="parabola-y" class="graph"></div>
+            <script>graph_inverse("Math.pow(y, 2) - 1", "parabola-y", [-2, 2], [-2, 2]);</script>
+            <dd>$$ E \ne f $$</dd>
+            <dd>$$ E^{-1} = f^{-1} $$</dd>
+            <dd>$$ \therefore nonfunction $$</dd>
+
+        </dl>
     </section>
 
     <section id="locus">
         <h2>Locus</h2>
+
+        <dl>
+            <dt>Locus Definition</dt>
+            <dd>Group of points that satisfy a certain condition</dd>
+
+            <dt>Key Words Table</dt>
+            <dd>
+                <table>
+                    <tr>
+                        <th>Keywords</th>
+                        <th>Math Symbol</th>
+                    </tr>
+                    <tr>
+                        <td>is</td>
+                        <td>=</td>
+                    </tr>
+                    <tr>
+                        <td># More than</td>
+                        <td>+</td>
+                    </tr>
+                    <tr>
+                        <td># Less than</td>
+                        <td>-</td>
+                    </tr>
+                    <tr>
+                        <td>Abscissa</td>
+                        <td>x</td>
+                    </tr>
+                    <tr>
+                        <td>Ordinate</td>
+                        <td>y</td>
+                    </tr>
+                    <tr>
+                        <td>Distance</td>
+                        <td>$$\perp$$</td>
+                    </tr>
+                </table>
+            </dd>
+        </dl>
     </section>
 
     <section id="intercept-symmetry-domain">
-        <h2>Finding Intercepts, Symmetry, Domains</h2>
+        <h2>Forms, Intercepts, Symmetry, Domains</h2>
+
+        <dl>
+            <dt>Forms Table</dt>
+            <dd>
+                <table>
+                    <tr>
+                        <th>Form</th>
+                        <th>Given</th>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td>$$ y = mx + b $$</td>
+                        <td>m, y-intercept</td>
+                        <td>Slope-Intercept Form</td>
+                    </tr>
+                    <tr>
+                        <td>$$y - y_1 = m(x - x_1) $$</td>
+                        <td>m, point</td>
+                        <td>Point-Slope Form</td>
+                    </tr>
+                    <tr>
+                        <td>$$ \frac{y - y_1}{x - x_1} = \frac{y_2 - y_1}{x_2 - x_1} $$</td>
+                        <td>2 points</td>
+                        <td>2 Point Form</td>
+                    </tr>
+                    <tr>
+                        <td>$$ \frac{x}{a} + \frac{y}{b} = 1 $$</td>
+                        <td>x-intercept, y-intercept</td>
+                        <td>Intercept Form</td>
+                    </tr>
+                    <tr>
+                        <td>$$ x = x_1 $$</td>
+                        <td>|| to y</td>
+                        <td>|| to axis</td>
+                    </tr>
+                    <tr>
+                        <td>$$ y = y_1 $$</td>
+                        <td>|| to x</td>
+                        <td>|| to axis</td>
+                    </tr>
+                    <tr>
+                        <td>$$ Ax + By = C $$</td>
+                        <td></td>
+                        <td>Standard Form</td>
+                    </tr>
+                </table>
+            </dd>
+            <dd>
+                <p>$$ m = -\frac{A}{B} $$</p>
+                <p>$$ b = \frac{C}{B} $$</p>
+                <p>$$ a = \frac{C}{A} $$</p>
+            </dd>
+
+
+            <dt>Intercept</dt>
+            <dd>Point or points that passes x or y axis</dd>
+
+            <dd>Example $$ 9x^2 + 16y^2 = 144 $$</dd>
+
+            <dd>x-intercept (y = 0): $$ 9x^2 + 16(0)^2 = 144 $$</dd>
+            <dd>$$ x^2 = \frac{144}{9} $$</dd>
+            <dd>$$ x = \pm\sqrt{\frac{144}{9}} = \pm\frac{12}{3} = \pm4, (\pm4, 0) $$</dd>
+
+            <dd>y-intercept (x = 0): $$ 9(0)^2 + 16y^2 = 144 $$</dd>
+            <dd>$$ y^2 = \frac{144}{16} $$</dd>
+            <dd>$$ y = \pm\sqrt{\frac{144}{16}} = \pm\frac{12}{4} = \pm3, (\pm3, 0) $$</dd>
+
+
+            <dt>Symmetry</dt>
+            <dd>Check via the x-axis, y-axis, and origin</dd>
+
+            <dd>Example $$ 9x^2 + 16y^2 = 144 $$</dd>
+
+            <dd>x-axis (y => -y): $$ 9x^2 + 16(-y)^2 = 144 $$</dd>
+            <dd>$$ 9x^2 + 16y^2 = 144 \therefore yes$$</dd>
+
+            <dd>y-axis (x => -x): $$ 9(-x)^2 + 16y^2 = 144 $$</dd>
+            <dd>$$ 9x^2 + 16y^2 = 144 \therefore yes$$</dd>
+
+            <dd>Origin / (0, 0), (x => -x, y => -y): $$ 9(-x)^2 + 16(-y)^2 = 144 $$</dd>
+            <dd>$$ 9x^2 + 16y^2 = 144 $$</dd>
+
+
+            <dt>Domain</dt>
+            <dd>All x values that yield real y values (solve for y)</dd>
+
+            <dd>Example: $$ 4x^2 + y^2 = 25 $$</dd>
+            <dd>And $$ x + y = 5 $$</dd>
+            <dd>For this example, ignore the equations used in the graph, I had to convert from implicit to explicit equation</dd>
+            <div id="intersect" class="graph"></div>
+            <script>multi_graph(["Math.sqrt(25 - 4 * Math.pow(x, 2))", "5 - x"], "intersect", [-3, 3], [0, 6]);</script>
+            <dd>Set one variable equal to the other $$ y = 5 - x $$</dd>
+            <dd>Substitute in one equation inside the other $$ 4x^2 + (5 - x)^2 = 25 $$</dd>
+            <dd>Solve for the other variable: $$ 4x^2 + 25 - 10x + x^2 = 25 $$</dd>
+            <dd>$$ 5x^2 - 10x = 0 $$</dd>
+            <dd>$$ x^2 - 2x = 0 $$</dd>
+            <dd>$$ x(x - 2) = 0 $$</dd>
+            <dd>$$ x = 0, 2 $$</dd>
+            <dd>Plug in the x values into one of the equations (I picked the easier one): $$ y = 5 - (0) = 5 $$</dd>
+            <dd>$$ y = 5 - (2) = 3 $$</dd>
+            <dd>$$ \therefore y = 5, 3 $$</dd>
+            <dd>Points of intersection $$ \therefore (0, 5), (2, 3) $$</dd>
+        </dl>
     </section>
 
 <footer class="footer">
