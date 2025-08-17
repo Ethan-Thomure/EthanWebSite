@@ -28,18 +28,93 @@
 
 <section id="side-angle">
   <h2>Finding Sides and Angles of Triangles</h2>
+
+  <dl>
+    <dt>ASA, SAA, SSA</dt>
+    <dd>$$ \frac{a}{\sin{(a)}} = \frac{b}{\sin{(b)}} = \frac{c}{\sin{(c)}}$$</dd>
+
+    <dt>SAS, SSS</dt>
+    <dd>$$ a^2 = b^2 + c^2 -2bc\cos(A) $$</dd>
+    <dd>$$ b^2 = a^2 + c^2 -2ac \cos(B) $$</dd>
+    <dd>$$ c^2 = a^2 + b^2 -2ab \cos(C) $$</dd>
+
+    <dt>Double check</dt>
+    <dd>$$ \frac{a + b}{c} = \frac{\sin(A) + \sin(B)}{\sin(C)} $$</dd>
+  </dl>
 </section>
 
 <section id="ssa">
   <h2>Ambiguous Case: SSA</h2>
+
+  <dl>
+    <dt>Ambiguous Case SSA Table</dt>
+    <dd>
+      <table>
+        <tr>
+          <th></th>
+          <th>Opposite > Adjacent</th>
+          <th>Opposite = Adjacent</th>
+          <th>Opposite < Adjacent</th>
+        </tr>
+        <tr>
+          <th>$$ \theta > 90^\circ $$</th>
+          <td>1 Triangle</td>
+          <td>0 Triangles</td>
+          <td>0 Triangles</td>
+        </tr>
+        <tr>
+          <th>$$ \theta = 90^\circ $$</th>
+          <td>1 Triangle</td>
+          <td>0 Triangles</td>
+          <td>0 Triangles</td>
+        </tr>
+        <tr>
+          <th>$$ \theta < 90^\circ $$</th>
+          <td>1 Triangle</td>
+          <td>1 Triangle</td>
+          <td>***0, 1, or 2 noncongruent Triangles***</td>
+        </tr>
+      </table>
+    </dd>
+    <dd>$$ \sin{\theta} = \frac{opp}{"adj"} $$</dd>
+    <dd>IF $$ opp = "adj"\sin{\theta} \therefore 1\triangle $$</dd>
+    <dd>IF $$ opp < "adj"\sin{\theta} \therefore 0\triangle $$</dd>
+    <dd>IF $$ opp > "adj"\sin{\theta} \therefore 2\triangle $$</dd>
+  </dl>
 </section>
 
 <section id="area">
   <h2>Area</h2>
+
+  <dl>
+    <dt>Generic Triangle Area Formulas</dt>
+    <dd>$$ T = \frac{1}{2}bh $$</dd>
+    <dd>$$ T = \frac{1}{2}l_1l_2 $$</dd>
+    <dd>$$ t = \sqrt{s(s-a)(s-b)(s-c)} $$</dd>
+    <dd>where $$ p = a + b + c $$</dd>
+    <dd>$$ s = \frac{1}{2}p $$</dd>
+
+    <dt>SAS Area Formula</dt>
+    <dd>$$ T = \frac{1}{2}s_1s_2\sin{\theta} $$</dd>
+
+    <dt>ASA Area Formula</dt>
+    <dd>$$ T \frac{s^2}{2} \times \frac{1}{\cot{\theta} + \cot{\phi}} $$</dd>
+  </dl>
 </section>
 
 <section id="vector">
   <h2>Vector / Scalar Comment</h2>
+
+  <dl>
+    <dt>Vector</dt>
+    <dd>$$ \boldsymbol{R}, \vec{R}, \bar{R} $$</dd>
+
+    <dt>Scalar</dt>
+    <dd>Magnitude of Vector</dd>
+    <dd>$$ |\boldsymbol{R}|, |\vec{R}|, |\bar{R}| $$</dd>
+
+    <dt>Vector addition = (finds) Resultant</dt>
+  </dl>
 </section>
 
 <footer class="footer">
