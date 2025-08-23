@@ -29,22 +29,137 @@
 
 <section id="basics">
     <h2>Basics</h2>
+
+    <dl>
+        <dt>If a plane intersects a cone, it makes one of the following</dt>
+        <dd>0-1 points</dd>
+        <dd>0-2 straight lines</dd>
+        <dd>Circle</dd>
+        <dd>Parabola</dd>
+        <dd>Ellipse</dd>
+        <dd>Hyperbola</dd>
+
+        <dt>Standard equation for all the things that this intersection makes</dt>
+        <dd>$$Ax^2 + Bxy + Cy^2 + Dx + Ey + F = 0 $$</dd>
+
+        <dt>Equations to change angle of cartesian plane, assuming B is not 0</dt>
+        <dd>$$ x = x\prime\cos(\alpha) - y\prime\sin(\alpha) $$</dd>
+        <dd>$$ y = x\prime\sin(\alpha) + y\prime\cos(\alpha) $$</dd>
+        <dd>$$ \tan(2\alpha) = \frac{B}{A-C} $$</dd>
+
+        <dt>Eccentricity (e)</dt>
+        <dd>the distance to the focus (F) divided by the distance to the directrix (DD')</dd>
+    </dl>
 </section>
 
 <section id="circle">
     <h2>Circle</h2>
+
+    <dl>
+        <dt></dt>
+        <dd>$$ (x - h)^2 + (y - k)^2 = r^2 $$</dd>
+        <dd>$$ e = 0 $$</dd>
+        <dd>$$ a = b $$</dd>
+        <dd>
+            <div id="circle-graph" class="graph"></div>
+            <script>multi_graph(["Math.sqrt(1 - Math.pow(x, 2))", "-Math.sqrt(1 - Math.pow(x, 2))"],
+                "circle-graph", [-1, 1], [-1, 1]);</script>
+        </dd>
+    </dl>
 </section>
 
 <section id="parabola">
     <h2>Parabola</h2>
+
+    <dl>
+        <dt></dt>
+        <dd>distance to DD' = distance to f</dd>
+        <dd>$$ e = 1 $$</dd>
+        <dd>$$ LR = 4p $$</dd>
+
+
+        <dt>$$ 4p(y - k) = (x - h)^2 $$</dt>
+        <dd>
+            <div id="parabola-graph-up" class="graph"></div>
+            <script>graph("Math.pow(x, 2)", 'parabola-graph-up', [-1, 1], [-1, 1])</script>
+        </dd>
+        <dd>It is up (+) or down (-)</dd>
+
+        <dt>$$ 4p(x - h) = (y - k)^2 $$</dt>
+        <dd>
+            <div id="parabola-graph-right" class="graph"></div>
+            <script>graph_inverse("Math.pow(y, 2)", 'parabola-graph-right', [-1, 1], [-1, 1])</script>
+        </dd>
+        <dd>It is left (-) or right (+)</dd>
+    </dl>
 </section>
 
 <section id="ellipse">
-    <h2>Ellipse</h2>
+    <h2>Ellipse (Paraboloid)</h2>
+
+    <dl>
+        <dt></dt>
+        <dd>sum of distance to foci = 2a (major axis)</dd>
+        <dd>minor axis = 2b</dd>
+        <dd>$$ c = \pm\sqrt{a^2 - b^2} $$</dd>
+        <dd>$$ e = \frac{distance(f)}{distance(DD\prime)} $$</dd>
+        <dd>$$ 0 < e < 1 $$</dd>
+        <dd>$$ a > b $$</dd>
+        <dd>$$ e = \frac{c}{a} $$</dd>
+        <dd>$$ LR = \frac{2b^2}{a} $$</dd>
+
+        <dt>$$ \frac{(x - h)^2}{a^2} + \frac{(y - k)^2}{b^2} = 1 $$</dt>
+        <dd>
+            <div id="ellipse-graph-horizontal" class="graph"></div>
+            <script>multi_graph(["Math.sqrt(1 - Math.pow(x, 2) / 4)", "-Math.sqrt(1 - Math.pow(x, 2) / 4)"],
+                "ellipse-graph-horizontal", [-2, 2], [-2, 2])</script>
+        </dd>
+        <dd>It is left-right</dd>
+        <dd>$$ a = 2, b = 1, h = k = 0 $$</dd>
+
+        <dt>$$ \frac{(x - h)^2}{b^2} + \frac{(y - k)^2}{a^2} = 1 $$</dt>
+        <dd>
+            <div id="ellipse-graph-vertical" class="graph"></div>
+            <script>multi_graph(["2 * Math.sqrt(1 - Math.pow(x, 2))", "-2 * Math.sqrt(1 - Math.pow(x, 2))"],
+                "ellipse-graph-vertical", [-2, 2], [-2, 2])</script>
+        </dd>
+        <dd>It is up-down</dd>
+        <dd>$$ a = 2, b = 1, h = k = 0 $$</dd>
+    </dl>
 </section>
 
 <section id="hyperbola">
     <h2>Hyperbola</h2>
+
+    <dl>
+        <dt></dt>
+        <dd>Triangle (?) distance from point on the curve to f, f' = 2a</dd>
+        <dd>conjugate ax (?), TA = 2b</dd>
+        <dd>Transverse m (?), CA = 2a</dd>
+        <dd>Transverse ax = 2a ?</dd>
+        <dd>$$ c = \pm\sqrt{a^2 + b^2} $$</dd>
+        <dd>$$ e > 1 $$</dd>
+        <dd>$$ e = \frac{c}{a} $$</dd>
+        <dd>$$ LR = \frac{2b^2}{a} $$</dd>
+
+        <dt>$$ \frac{(x - h)^2}{a^2} - \frac{(y - k)^2}{b^2} = 1 $$</dt>
+        <dd>
+            <div id="hyperbola-graph-horizontal" class="graph"></div>
+            <script>multi_graph(['Math.sqrt(Math.pow(x, 2) - 1)', '-Math.sqrt(Math.pow(x, 2) - 1)'],
+                "hyperbola-graph-horizontal", [-4, 4], [-4, 4])</script>
+        </dd>
+        <dd>It is left-right</dd>
+        <dd>$$ a = b = h = k = 0 $$</dd>
+
+        <dt>$$ -\frac{(x - h)^2}{b^2} + \frac{(y - k)^2}{a^2} = 1 $$</dt>
+        <dd>
+            <div id="hyperbola-graph-vertical" class="graph"></div>
+            <script>multi_graph(['Math.sqrt(Math.pow(x, 2) + 1)', '-Math.sqrt(Math.pow(x, 2) + 1)'],
+                "hyperbola-graph-vertical", [-4, 4], [-4, 4])</script>
+        </dd>
+        <dd>It is up-down</dd>
+        <dd>$$ a = b = h = k = 0 $$</dd>
+    </dl>
 </section>
 
 <footer class="footer">

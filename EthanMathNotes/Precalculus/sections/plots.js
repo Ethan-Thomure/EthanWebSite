@@ -1,41 +1,24 @@
 
+const config = {
+    autosize: true,
+    displayModeBar: false,
+    staticPlot: true,
+    showticklabels: true
+};
+
 function graph(exp, name, domain, range) {
     multi_graph([exp], name, domain, range);
 }
 
 function graph_inverse(exp, name, domain, range) {
-    // let sine_exp = "Math.sin(x)";
-
 // Generate values
     const xValues = [];
     const yValues = [];
-    for (let y = domain[0]; y <= domain[1] * Math.PI; y += .1) {
+    for (let y = domain[0]; y <= domain[1] * 5; y += .01) {
         xValues.push(eval(exp));
         yValues.push(y);
     }
-
-// Display using Plotly
-    const data = [{x:xValues, y:yValues, mode:"lines"}];
-    const layout = {
-        title: {text: "y = " + exp},
-        xaxis: {
-            title: {text: "x"},
-            range: domain
-        },
-        yaxis: {
-            title: {text: "y"},
-            range: range
-        },
-        width: 800
-    };
-
-    const config = {
-        displayModeBar: false,
-        staticPlot: true,
-        showticklabels: true
-    };
-
-    Plotly.newPlot(name, data, layout, config);
+    __plot_graph(xValues, yValues, domain, range, name)
 }
 
 function multi_graph(exps, name, domain, range) {
@@ -46,33 +29,30 @@ function multi_graph(exps, name, domain, range) {
 
     for (let current_exp = 0; current_exp < exps.length; current_exp++) {
         title = title + ", " + exps[current_exp];
-        for (let x = domain[0]; x <= domain[1] * Math.PI; x += .1) {
+        for (let x = domain[0]; x <= domain[1] * 5; x += .01) {
             xValues.push(x);
             yValues.push(eval(exps[current_exp]));
         }
     }
+    __plot_graph(xValues, yValues, domain, range, name);
+}
 
-
-
-// Display using Plotly
+function __plot_graph(xValues, yValues, domain, range, name) {
     const data = [{x:xValues, y:yValues, mode:"lines"}];
     const layout = {
-        title: {text: "y = " + title},
+        // title: {text: "y = " + title},
         xaxis: {
             title: {text: "x"},
-            range: domain
+            range: domain,
+            scaleanchor: 'y',
+            constrain: 'domain'
         },
         yaxis: {
             title: {text: "y"},
-            range: range
+            range: range,
+            scaleratio: 1,
+            conatrin: 'domain'
         },
-        width: 800
-    };
-
-    const config = {
-        displayModeBar: false,
-        staticPlot: true,
-        showticklabels: true
     };
 
     Plotly.newPlot(name, data, layout, config);

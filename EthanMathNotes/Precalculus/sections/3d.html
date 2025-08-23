@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Three Dimensional Coordinates</title>
+    <style>@import url(../precalculus_styles.css);</style>
+    <script src="plots.js"></script>
+    <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body>
+
+<header class="header">
+    <a href="#" class="logo">Three Dimensional Coordinates</a>
+
+    <i class="bx bx-menu" id="menu-icon"></i>
+
+    <nav class="navbar">
+        <a href="#basics" class="active">Basics</a>
+    </nav>
+</header>
+
+<section id="basics">
+    <h2>Basics</h2>
+
+    <dl>
+        <dt>planes</dt>
+        <dd>xy-plane: z = 0</dd>
+        <dd>xz-plane: y = 0</dd>
+        <dd>yz-plane: x = 0</dd>
+
+        <dt>distance</dt>
+        <dd>$$ \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2 + (z_2 - z_1)^2} $$</dd>
+
+        <dt></dt>
+        <dd>
+            <div id="3d"></div>
+            <script>graph("x", "3d", [-1, 1], [-1, 1])</script>
+        </dd>
+        <dd>Blue line is z-axis</dd>
+    </dl>
+</section>
+
+
+<footer class="footer">
+
+    <div class="footer-iconTop">
+        <a href="../precalculus-home.html"><i class='bx bx-up-arrow-alt'>Back</i></a>
+    </div>
+</footer>
+
+<!--Javascript-->
+<script src="../../../scripts.js"></script>
+</body>
+</html>
