@@ -20,9 +20,8 @@
 
     <nav class="navbar">
         <a href="#home" class="active">Home</a>
-        <a href="#about" >About</a>
-        <a href="#certifications">Certificates</a>
         <a href="#portfolio">Projects</a> <!-- projects == portfolio-->
+        <a href="#certifications">Certificates</a>
     </nav>
 </header>
 
@@ -46,79 +45,21 @@
     </div>
 </section>
 
-<!-- about section design -->
-<section class="about" id="about">
-    <div class="about-img">
-        <img src="images/profile-photo.JPEG" alt="Ethan Thomure">
-    </div>
-
-    <div class="about-content">
-        <h2 class="heading">About <span>Me</span></h2>
-        <h3>Computer Science graduate</h3>
-        <p>The programming languages I am familiar with are: Python, Java, C++, C#, and JavaScript.
-            I am down for just about any kind of computer project, including making a snazzy website.</p>
-        <!--            <a href="#" class="btn">Read More</a>-->
-    </div>
-</section>
-
-<!-- certifications section design -->
-<section class="certifications" id="certifications">
-    <h2 class="heading">My Informal <span>Certifications</span> Via Hyperskill</h2>
-
-    <div class="certifications-container">
-        <div class="certification-box">
-            <i class='bx bxl-javascript' ></i>
-            <h3>Introduction to JavaScript Certification</h3>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
-            <a href="images/certificates/Introduction_to_JavaScript_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
-        </div>
-
-        <div class="certification-box">
-            <i class='bx bxl-python' ></i>
-            <h3>Introduction to Python Certification</h3>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
-            <a href="images/certificates/Introduction_to_Python_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
-        </div>
-
-        <div class="certification-box">
-            <i class='bx bx-data' ></i>
-            <h3>Introduction to SQL Certification</h3>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
-            <a href="images/certificates/Introduction_to_SQL_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
-        </div>
-
-        <div class="certification-box">
-            <i class='bx bxs-data' ></i>
-            <h3>SQL for Data Analysis Certification</h3>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
-            <a href="images/certificates/SQL_for_Data_Analysis_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
-        </div>
-
-        <div class="certification-box">
-            <i class='bx bx-analyse' ></i>
-            <h3>Databases with SQL and Python</h3>
-<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
-            <a href="images/certificates/Databases_with_SQL_and_Python.pdf" target="_blank" class="btn">Look at Certificate</a>
-        </div>
-    </div>
-
-</section>
-
 <!-- portfolio section design-->
 <section class="portfolio" id="portfolio">
     <h2 class="heading">My <span>Projects</span></h2>
 
     <div class="portfolio-container">
-        <div class="portfolio-box">
-            <img src="images/projects/math-icon.png" alt="Math Notes Example">
+        <div class="portfolio-box" id="math-notes-box">
+            <img src="images/math.png" alt="Math Notes Example">
             <div class="portfolio-layer">
                 <h4>Math Notes</h4>
                 <p>Collection of my math notes so far. Currently working on geometry.</p>
-                <a href="EthanMathNotes/index.html"><i class='bx bx-link-external'></i></a>
+                <a href="mathnotes/"><i class='bx bx-link-external'></i></a>
             </div>
         </div>
 
-        <div class="portfolio-box">
+        <div class="portfolio-box" id="fridge-box">
             <img src="images/projects/fridge-inventory-application.png" alt="Fridge Inventory Application image">
             <div class="portfolio-layer">
                 <h4>Fridge Inventory Application</h4>
@@ -174,7 +115,49 @@
     </div>
 </section>
 
-<!-- contact section design -->
+<!-- certifications section design -->
+<section class="certifications" id="certifications">
+    <h2 class="heading">My Informal <span>Certifications</span> Via Hyperskill</h2>
+
+    <div class="certifications-container">
+        <div class="certification-box">
+            <i class='bx bxl-javascript' ></i>
+            <h3>Introduction to JavaScript Certification</h3>
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
+            <a href="images/certificates/Introduction_to_JavaScript_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bxl-python' ></i>
+            <h3>Introduction to Python Certification</h3>
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
+            <a href="images/certificates/Introduction_to_Python_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bx-data' ></i>
+            <h3>Introduction to SQL Certification</h3>
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
+            <a href="images/certificates/Introduction_to_SQL_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bxs-data' ></i>
+            <h3>SQL for Data Analysis Certification</h3>
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
+            <a href="images/certificates/SQL_for_Data_Analysis_Certificate.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+
+        <div class="certification-box">
+            <i class='bx bx-analyse' ></i>
+            <h3>Databases with SQL and Python</h3>
+<!--            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sequi dignissimos vitae magni aut commodi</p>-->
+            <a href="images/certificates/Databases_with_SQL_and_Python.pdf" target="_blank" class="btn">Look at Certificate</a>
+        </div>
+    </div>
+
+</section>
+
 
 <!-- footer design -->
 <footer class="footer">
