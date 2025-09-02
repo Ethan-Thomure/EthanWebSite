@@ -91,11 +91,40 @@ dl {
 
 /*BREAKPOINTS*/
 
-@media (max-width: 991px) {
 
-    /*///////////////////////////////////////////////////*/
+
+@media (max-width: 980px) and (min-height: 1300px) {
+
+    .logo {
+        display: none;
+    }
+
     .selections {
         padding-bottom: 7rem;
+    }
+    .selections-container {
+        flex-grow: 100;
+        align-items: stretch;
+
+        flex-direction: column;
+
+        .selection-box {
+            /*padding-top: 25%;*/
+            padding-bottom: 50%;
+
+            min-height: 100%;
+            min-width: 100%;
+            h3, p, a {
+                font-size: 4rem;
+            }
+            a {
+                /*margin-top: 10%;*/
+            }
+        }
+    }
+
+    dt, dd, .navbar a {
+        font-size: 4rem;
     }
 }
 
