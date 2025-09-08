@@ -126,6 +126,18 @@ dl {
     dt, dd, .navbar a {
         font-size: 4rem;
     }
+
+    /*html {*/
+    /*    font-size: 4rem;*/
+    /*}*/
+
+    .selection-box a {
+        margin-bottom: 2%;
+    }
+
+    /*footer {*/
+    /*    font-size: 4rem;*/
+    /*}*/
 }
 
 @media (max-width: 768px) {

@@ -16,3 +16,33 @@ dd table {
         border: none;
     }
 }
+
+.cartesian {
+    border-spacing: 0;
+
+    th, td {
+
+
+        padding: 30px;
+        margin: 0;
+        text-align: center;
+    }
+    td {
+        border: none;
+        border-bottom: 1px solid var(--text-color);
+    }
+
+    th {
+        border: none;
+    }
+
+    .cartesian-bottom {
+        border-bottom: none;
+    }
+
+
+
+    .cartesian-left {
+        border-right: 1px solid var(--text-color);
+    }
+}

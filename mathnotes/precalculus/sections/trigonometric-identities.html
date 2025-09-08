@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Trigonometric Identities</title>
     <style>@import url(../precalculus_styles.css);</style>
-    <script src="plots.js"></script>
+    <script src="plots.js" ></script>
     <script src="https://cdn.plot.ly/plotly-3.0.1.min.js" charset="utf-8"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
@@ -127,16 +127,46 @@
 <!--TODO: Add pictures-->
         <dl>
             <dt><span>S</span>ame trig function</dt>
-            <dd>Quadrant I: $$ \theta = \rho $$</dd>
-            <dd>Quadrant II: $$ \theta = 180^\circ - \rho = \pi - \rho $$</dd>
-            <dd>Quadrant III: $$ \theta = 180^\circ + \rho = \pi + \rho $$</dd>
-            <dd>Quadrant IV: $$ \theta = 360^\circ - \rho = \pi - \rho $$</dd>
+
+            <dd><table class="graph">
+                <tr>
+                    <th>Q II</th>
+                    <th>Q I</th>
+                </tr>
+                <tr>
+                    <td class="graph-left">$$ \theta = 180^\circ - \rho = \pi - \rho $$</td>
+                    <td>$$ \theta = \rho $$</td>
+                </tr>
+                <tr>
+                    <td class="graph-left graph-bottom">$$ \theta = 180^\circ + \rho = \pi + \rho $$</td>
+                    <td class="graph-bottom">$$ \theta = 360^\circ - \rho = \pi - \rho $$</td>
+                </tr>
+                <tr>
+                    <th>Q III</th>
+                    <th>Q IV</th>
+                </tr>
+            </table></dd>
 
             <dt><span>C</span>O trig function</dt>
-            <dd>Quadrant I: $$ \theta = 90^\circ - \rho = \frac{\pi}{2} - \rho $$</dd>
-            <dd>Quadrant II: $$ \theta = 90^\circ + \rho = \frac{\pi}{2} + \rho $$</dd>
-            <dd>Quadrant III: $$ \theta = 270^\circ - \rho = \frac{3\pi}{2} - \rho $$</dd>
-            <dd>Quadrant IV: $$ \theta = 270^\circ + \rho = \frac{3\pi}{2} + \rho $$</dd>
+
+            <dd><table class="graph">
+                <tr>
+                    <th>Q II</th>
+                    <th>Q I</th>
+                </tr>
+                <tr>
+                    <td class="graph-left">$$ \theta = 90^\circ + \rho = \frac{\pi}{2} + \rho $$</td>
+                    <td>$$ \theta = 90^\circ - \rho = \frac{\pi}{2} - \rho $$</td>
+                </tr>
+                <tr>
+                    <td class="graph-left graph-bottom">$$ \theta = 270^\circ - \rho = \frac{3\pi}{2} - \rho $$</td>
+                    <td class="graph-bottom">$$ \theta = 270^\circ + \rho = \frac{3\pi}{2} + \rho $$</td>
+                </tr>
+                <tr>
+                    <th>Q III</th>
+                    <th>Q IV</th>
+                </tr>
+            </table></dd>
         </dl>
 
     </section>

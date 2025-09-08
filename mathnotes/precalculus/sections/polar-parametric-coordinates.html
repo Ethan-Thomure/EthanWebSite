@@ -37,11 +37,146 @@
     <dd>$$ x = r\cos{\theta} $$</dd>
     <dd>$$ y = r\sin{\theta} $$</dd>
     <dd>Trig form / Polar form $$ r(\cos{\theta} + i\sin{\theta}) $$</dd>
+
+    <dt>Example: Convert $$2 + 2i$$ to polar</dt>
+    <dd>$$ r = \pm\sqrt{a^2 + b^2} $$</dd>
+    <dd>$$ r = \pm\sqrt{(2)^2 + (2)^2} $$</dd>
+    <dd>$$ r = \pm 2 \sqrt{2} $$</dd>
+    <dd>$$ \tan{\theta} = \frac{a}{b} $$</dd>
+    <dd>(A)S(T)C $$ \tan{\theta} = \frac{2}{2} = 1$$</dd>
+    <dd>$$ \theta = 45^\circ, 225^\circ $$</dd>
+    <dd>Polar form: $$ 2\sqrt{2}(\cos45^\circ + i\sin45^\circ) $$</dd>
+    <dd>$$ -2\sqrt2(\cos225^\circ + i\sin225^\circ) $$</dd>
+
+    <dt>Some more equations</dt>
+    <dd>$$ n(\cos\theta + i\sin\theta) \cdot m(\cos\phi + i\sin\phi)
+      = nm(\cos{(\theta + \phi)} + i\sin{(\theta + \phi)}) $$</dd>
+    <dd>$$ \frac{n(\cos\theta + i\sin\theta)}{m(\cos\phi + i\sin\phi)}
+      = \frac{n}{m}(\cos{(\theta - \phi)} + i\sin{(\theta - \phi)})$$</dd>
+    <dd>$$ [r(\cos\theta + i\sin\phi)]^n = r^n(\cos{(n \cdot \theta)} + i\sin{(n \cdot \phi)}) $$</dd>
+
+    <dt></dt>
+    <dd>The origin is called the "pole"</dd>
+    <dd>The radius out is called the "polar axis"</dd>
+    <dd>$$ r == \rho? $$</dd>
+
+    <dt>Branched Tangents</dt>
+    <dd>1: &rho; = 0<dd>
+    <dd>2: solve for &theta;</dd>
+
+    <dt>Symmetry</dt>
+    <dd>"Horizontal" $$ \theta = 0^\circ, 180^\circ $$</dd>
+    <dd>Pole = $$ \theta = 90^\circ, 270^\circ $$</dd>
+
+    <dd><table class="cartesian">
+      <tr>
+        <th>Q II</th>
+        <th>Q I</th>
+      </tr>
+      <tr>
+        <td class="cartesian-left">$$ (\rho, 180^\circ - \theta), (-\rho, -\theta) $$</td>
+        <td>$$ (\rho, \theta) $$</td>
+      </tr>
+      <tr>
+        <td class="cartesian-left cartesian-bottom">$$ (\rho, 180^\circ + \theta), (-\rho, \theta) $$</td>
+        <td class="cartesian-bottom">$$ (\rho, -\theta), (-\rho, 180^\circ - \theta) $$</td>
+      </tr>
+      <tr>
+        <th>Q III</th>
+        <th>Q IV</th>
+      </tr>
+    </table></dd>
+
+    <dt>Basic shapes</dt>
+    <dd>$$ \rho = a \pm b\sin\theta $$</dd>
+    <dd>$$ \rho = a \pm b\cos\theta $$</dd>
+
+    <dd>if a or b = 0: circle</dd>
+    <dd>example: $$ \rho = \sin\theta $$</dd>
+    <div id="circle" class="graph"></div>
+    <script>polar_graph("Math.sin(theta)", "circle", [0, 1]);</script>
+
+    <dd>if a &#x2260; b: limacon</dd>
+    <dd>example: $$ \rho = 1 + 2\cos\theta $$</dd>
+    <div id="limacon" class="graph"></div>
+    <script>polar_graph("1 + 2 * Math.cos(theta)", "limacon", [0, 3]);</script>
+
+    <dd>if a = b: cardioid</dd>
+    <dd>example: $$ -1 - \sin\theta $$</dd>
+    <div id="cardioid" class="graph"></div>
+    <script>polar_graph("-1 -Math.sin(theta)", "cardioid", [0, 2])</script>
+
+    <dt></dt>
+    <dd>$$ \rho = r\sin{(n\theta)} $$</dd>
+    <dd>$$ \rho = r\cos{(n\theta)} $$</dd>
+    <dd>A rose, where r is constant</dd>
+
+    <dd>n - leaved when n is odd</dd>
+    <dd>Example: $$ \sin{(3\theta)} $$</dd>
+    <div id="odd-rose" class="graph"></div>
+    <script>polar_graph("Math.sin(3 * theta)", "odd-rose", [0, 1], [0, 70], 3)</script>
+
+    <dd>2n - leaved when n is even</dd>
+    <dd>Example: $$ \cos{(2\theta)} $$</dd>
+    <div id="even-rose" class="graph"></div>
+    <script>polar_graph("Math.cos(2 * theta)", "even-rose", [0, 1], [0, 210], 6.1)</script>
+
+    <dt>Something cool to solidify concept</dt>
+    <dd>I approached a problem where the graphs couldn't handle a negative &rho;</dd>
+    <dd>The solution? everytime we find a negative &rho;, set it positive and add 180&deg; to the respective &theta;</dd>
+    <dd>This way, negative &rho; is on the opposite side of the graph, as intended</dd>
+    <dd>This possible via the ambiguity of polar graphs</dd>
   </dl>
 </section>
 
 <section id="parametric">
   <h2>Parametric Coordinates</h2>
+
+  <dl>
+    <dt>Parametric equation</dt>
+    <dd>Third variable</dd>
+    <dd>Example: $$ x = 2t $$</dd>
+    <dd>$$ y = t - t^2 $$</dd>
+    <div id="parametric-example" class="graph"></div>
+    <script>graph_parametric("2 * t", "t - t * t", "parametric-example", [0, 5], [-5, 5])</script>
+    <dd><table class="cartesian">
+      <tr>
+        <th>t</th>
+        <th>x</th>
+        <th>y</th>
+      </tr>
+      <tr>
+        <td class="cartesian-left">0</td>
+        <td class="cartesian-left">0</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="cartesian-left">1</td>
+        <td class="cartesian-left">2</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td class="cartesian-left">2</td>
+        <td class="cartesian-left">4</td>
+        <td>-2</td>
+      </tr>
+      <tr>
+        <td class="cartesian-left">3</td>
+        <td class="cartesian-left">6</td>
+        <td>-6</td>
+      </tr>
+    </table></dd>
+
+    <dt>Something cool to solidify concept</dt>
+    <dd>I wanted my code to be cleaner, and to defer the logic of calculating all normal x, y graphs (including inverses) to parametric</dd>
+    <dd>Lets define the original x, y: $$ y = func(x) $$</dd>
+    <dd>What you can do is replace the independent variable for t</dd>
+    <dd>The parametric equivalent would be: $$ x = t $$</dd>
+    <dd>$$ y = func(t) $$</dd>
+    <dd>This works because now x and t are interchangeable</dd>
+    <dd>When x and y are switched, just pick y for t instead, meaning now I can have both types of graphs deferring to parametric calculations</dd>
+
+  </dl>
 </section>
 
 <footer class="footer">
