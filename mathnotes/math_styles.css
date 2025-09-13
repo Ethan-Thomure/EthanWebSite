@@ -31,6 +31,16 @@
         border-color: var(--main-color);
         transform: scale(1.02);
     };
+
+    .coming-soon {
+        /*color: var(--main-color);*/
+        border-color: var(--second-bg-color) !important;
+
+        .btn {
+            box-shadow: none;
+            background: var(--bg-color);
+        }
+    }
 }
 
 .selection-box {
@@ -88,6 +98,8 @@ dl {
         box-shadow: 0 0 1rem var(--main-color);
     };
 }
+
+
 
 /*BREAKPOINTS*/
 

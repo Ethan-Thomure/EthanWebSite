@@ -28,10 +28,153 @@
 
 <section id="basics">
   <h2>Basics</h2>
+
+  <dl>
+    <dt>distance</dt>
+    <dd>1-dimensional $$ d = \vert n_2 - n_1\vert $$</dd>
+    <dd>2-dimensional $$ d = \pm \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2} $$</dd>
+
+    <dt>slope</dt>
+    <dd>$$ M(\frac{x_1 + x_2}{2}, \frac{y_1+y_2}{2}) $$</dd>
+
+    <dd>$$\theta = \alpha_x - \alpha_i = m_2 - \arctan{m_1} [?]$$</dd>
+    <dd>Terminal = line that "makes angle"</dd>
+    <dd>(&alpha;) Inclination $$ [0^\circ, 180^\circ), 0^\circ \le inclination \lt 180^\circ $$</dd>
+    <dd>(m) Slope = Measure of slantness on line $$ m = \tan{\alpha} = \frac{y_2 - y_1}{x_2 - x_1} $$</dd>
+
+    <dt>Positive Slope: $$ 0^\circ < \alpha < 90^\circ $$</dt>
+    <div id="positive-slope"></div>
+    <script>graph("x", "positive-slope", [-1, 1], [-1, 1])</script>
+
+    <dt>Negative Slope: $$ 90^\circ < \alpha < 180^\circ $$</dt>
+    <div id="negative-slope"></div>
+    <script>graph("-x", "negative-slope", [-1, 1], [-1, 1])</script>
+
+    <dt>Undetermined Slope: $$ \alpha = 90^\circ $$</dt>
+    <div id="undetermined-slope"></div>
+    <script>graph_inverse("0", "undetermined-slope", [-1, 1], [-1, 1])</script>
+
+    <dt>$$ \alpha = 0 $$</dt>
+    <div id="0-slope"></div>
+    <script>graph("0", "0-slope", [-1, 1], [-1, 1])</script>
+
+    <dt>Parallel Slopes (||): $$ m_1 = m_2 $$</dt>
+    <div id="equal-slope"></div>
+    <script>multi_graph(["x - .5", "x + .5"], "equal-slope", [-1, 1], [-1, 1])</script>
+
+    <dt>Perpendicular Slopes (&perp;): $$ m_2 = -\frac{1}{m_1} $$</dt>
+    <div id="perpendicular-slope"></div>
+    <script>multi_graph(["2 * x", "-.5 * x"], "perpendicular-slope", [-1, 1], [-1, 1])</script>
+  </dl>
 </section>
 
 <section id="method-least-squares">
   <h2>Method of Least Squares</h2>
+  <dl>
+    <dt>Example math</dt>
+    <dd>We are trying to find the correct fit for our observational data</dd>
+    <dd>In other words, we are attempting to find m, b for the equation: $$d = tm + b$$</dd>
+    <dd>By multiplying both sides by t $$td = t^2m + tb$$</dd>
+    <dd>Then averaging the results of these equations</dd>
+    <dd>
+      <table class="tabulation">
+        <tr>
+          <th>independent</th>
+          <th>dependent</th>
+          <th>observational equation</th>
+          <th></th>
+        </tr>
+        <tr>
+          <th>$$ t $$</th>
+          <th>$$ d $$</th>
+          <th>$$ d = tm + b $$</th>
+          <th>$$ td = t^2m + tb $$</th>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>6.00</td>
+          <td>$$(6.00) = (0)m + b$$</td>
+          <td>$$-$$</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>6.60</td>
+          <td>$$(6.60) = (5)m + b$$</td>
+          <td>$$5(660) = (5)^2m + 5b$$</td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>7.00</td>
+          <td>$$(7.00) = (10)m + b$$</td>
+          <td>$$10(7.00) = (10)^2m + (10)b $$</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>7.40</td>
+          <td>$$(7.40) = (15)m + b$$</td>
+          <td>$$15(7.40) = (15)^2m + (15)b $$</td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>7.92</td>
+          <td>$$(7.92) = (20)m + b$$</td>
+          <td>$$20(7.92) = (20)^2m + (20)b $$</td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>8.60</td>
+          <td>$$(8.60) = (25)m + b$$</td>
+          <td>$$25(8.60) = (25)^2m + (25)b $$</td>
+        </tr>
+        <tr>
+          <td>30</td>
+          <td>9.10</td>
+          <td>$$(9.10) = (30)m + b$$</td>
+          <td>$$30(9.10) = (30)^2m + (30)b $$</td>
+        </tr>
+        <tr>
+          <td>n = 7</td>
+          <td>Add equations togeter --></td>
+          <td>$$ (52.62 = 105m + 7b) $$</td>
+          <td>$$ (860.40 = 2275m + 105b) $$</td>
+        </tr>
+      </table>
+    </dd>
+    <dd>Now find b from one equation: $$ 52.62 = 105m + 7b $$</dd>
+    <dd>$$ b = \frac{52.62 - 105m}{7} $$</dd>
+    <dd>And plug it into the other: $$ 860.40 = 2275m + 105b $$</dd>
+    <dd>$$ 860.40 = 2275m + 105(\frac{52.62 - 105m}{7}) $$</dd>
+    <dd>$$ 860.40 = 2275m + 789.30 - 1575m $$</dd>
+    <dd>$$ 700m = 71.1 $$</dd>
+    <dd>$$ m = 0.1015... $$</dd>
+    <dd>Now put that m back into the first one to find b: $$ b = \frac{52.62 - 105(0.1015...)}{7} $$</dd>
+    <dd>$$ b = 5.9935 $$</dd>
+    <dd>Putting it all together for the final answer: $$ d = 0.102t + 5.99 $$</dd>
+
+    <dt>Some equations for what we just did</dt>
+    <dd>$$ m = \frac{n\sum xy - \sum x \cdot \sum y}{n \sum (x^2) - (\sum x)^2} $$</dd>
+    <dd>$$ b = \frac{\sum x ^2 \cdot \sum y - \sum xy \cdot \sum x}{n\sum (x^2) - (\sum x)^2} $$</dd>
+    <dd>Pearson $$ r = \frac{n \sum xy - \sum x \sum y}{\sqrt{(n \sum x^2 - (\sum x)^2)(n \sum y^2 - (\sum y)^2)}} $$</dd>
+
+    <dt>Definitions</dt>
+    <dd>Interpolation = Determining value within range of values</dd>
+    <dd>Extrapolation = Determining value outside range of values</dd>
+    <dd>Outlier = Data point outside points of value</dd>
+    <dd>Correlation Coefficient (r) = Squared is the percent of accuracy $$ -1 \le r \le 1 $$</dd>
+    <dd>-r means -m, reliable</dd>
+    <dd>+r means +m, reliable</dd>
+    <dd>note: closer to 0 means unreliable</dd>
+
+    <dt>Log equation manipulations</dt>
+    <dd>$$ y = ax^t $$</dd>
+    <dd>$$ \log y = \log (ax^t) $$</dd>
+    <dd>$$ \log y = \log a + \log (x^t) $$</dd>
+    <dd>$$ \log y = \log a + t\log x $$</dd>
+
+    <dt>Series equation (don't know why this was part of my notes)</dt>
+    <dd>$$ y = a + bx + cx^2 + ... + mx^n $$</dd>
+    <dd>Amount of multiply by x: $$n + 1$$</dd>
+  </dl>
 </section>
 
 <section id="derivatives">
