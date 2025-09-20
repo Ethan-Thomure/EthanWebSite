@@ -8,21 +8,21 @@ const config = {
     // showLegend: false
 };
 
+const colors = [
+    'blue',
+    'orange',
+    'red',
+    'green',
+    'yellow',
+    'purple'
+]
+
 function graph(exp, name, domain, range) {
     multi_graph([exp], name, domain, range);
     // graph_parametric("t", exp.replaceAll('x', 't'), name, domain, range);
 }
 
 function graph_inverse(exp, name, domain, range) {
-// Generate values
-//     const xValues = [];
-//     const yValues = [];
-//     for (let y = domain[0]; y <= domain[1] * 5; y += .01) {
-//         xValues.push(eval(exp));
-//         yValues.push(y);
-//     }
-//     let trace = [__make_trace(xValues, yValues)];
-//     __plot_graph(trace, domain, range, name);
     graph_parametric(exp.replaceAll('y', 't'), 't', name, domain, range);
 }
 
@@ -37,7 +37,7 @@ function graph_parametric(x_eq, y_eq, name, domain_t, range_xy) {
     __plot_graph(trace, domain_t, range_xy, name);
 }
 
-function multi_graph(exps, name, domain, range) {
+function multi_graph(exps, name, domain, range, different_colors=false) {
     const traces = [];
     for (let current_exp = 0; current_exp < exps.length; current_exp++) {
         const xValues = [];
@@ -46,8 +46,12 @@ function multi_graph(exps, name, domain, range) {
             xValues.push(x);
             yValues.push(eval(exps[current_exp]));
         }
+        if (different_colors) {
+            traces.push(__make_trace(xValues, yValues, colors[current_exp]));
+        } else {
+            traces.push(__make_trace(xValues, yValues));
+        }
 
-        traces.push(__make_trace(xValues, yValues));
     }
     __plot_graph(traces, domain, range, name);
 }
@@ -107,8 +111,8 @@ function __plot_graph(traces, domain, range, name) {
     Plotly.newPlot(name, traces, layout, config);
 }
 
-function __make_trace(xValues, yValues) {
-    return {x: xValues, y: yValues, mode: 'lines', line: {color: 'blue'}, showlegend: false}
+function __make_trace(xValues, yValues, color=colors[0]) {
+    return {x: xValues, y: yValues, mode: 'lines', line: {color: color}, showlegend: false}
 }
 
 function toDegrees(angle) {
